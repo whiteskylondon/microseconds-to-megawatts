@@ -1,0 +1,20 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Raw source pulls (can be large; cache locally, don't commit)
+data/raw/
+
+# Build outputs at repo root (the ~11MB kepler export); the published copy
+# lives in docs/ and IS tracked
+/*.html
+!docs/*.html
+
+# macOS
+.DS_Store
+
+# Local tooling
+.claude/

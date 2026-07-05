@@ -1,0 +1,4 @@
+pandas>=2.0
+keplergl>=0.3
+# keplergl 0.3.x imports pkg_resources, removed in setuptools 81+
+setuptools<81
