@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import urllib.parse
 from pathlib import Path
 
 import pandas as pd
@@ -40,6 +41,10 @@ MAPBOX_TOKEN_RE = re.compile(r"pk\.eyJ[0-9A-Za-z_-]+\.[0-9A-Za-z_-]+")
 FULLSCREEN_SNIPPET = """<style>
   html, body { width: 100%; height: 100%; }
   .keplergl-widget-container { width: 100vw !important; height: 100vh !important; }
+  .map-popover {
+    border: 1px solid rgba(255, 255, 255, 0.28) !important;
+    border-radius: 6px !important;
+  }
 </style>
 <script>
   window.addEventListener('load', function () {
@@ -49,9 +54,34 @@ FULLSCREEN_SNIPPET = """<style>
 """
 
 TIER_LABELS = {
-    "execution": "Tier 1 — Execution (exchange colo)",
-    "network": "Tier 2 — Network (microwave/shortwave)",
-    "research": "Tier 3 — Research (ML compute)",
+    "execution": "Layer 1 — Execution (exchange colo)",
+    "network": "Layer 2 — Network sites (towers & antennas)",
+    "research": "Layer 3 — Research (ML compute)",
+}
+
+# Column names -> human labels shown in the kepler tooltip (kepler displays
+# raw column names, so the display DataFrames are renamed before add_data).
+SITE_DISPLAY = {
+    "site_name": "Site",
+    "operator_or_venue": "Operator / venue",
+    "firms_linked": "Firms linked",
+    "capacity_note": "Notes",
+    "power_mw": "Power (MW)",
+    "status": "Status",
+    "coord_precision": "Pin precision",
+    "confidence": "Confidence",
+    "evidence_note": "Evidence",
+    "evidence_url": "Source URL",
+    "gmaps_url": "Google Maps",
+}
+PATH_DISPLAY = {
+    "route": "Route",
+    "operator": "Operator",
+    "medium": "Medium",
+    "status": "Status",
+    "confidence": "Confidence",
+    "evidence_note": "Evidence",
+    "evidence_url": "Source URL",
 }
 
 # Hex colors per tier, referenced in the kepler config below.
@@ -61,8 +91,8 @@ TIER_COLORS = {
     "research": [70, 130, 240],   # blue — the compute layer
 }
 
-PATHS_LABEL = "Tier 2 — Paths (arcs)"
-PATHS_COLOR = [250, 190, 60]      # amber, matching the network tier
+PATHS_LABEL = "Layer 2 — Network paths (routes)"
+PATHS_COLOR = [250, 190, 60]      # amber, matching the network layer
 
 
 def load_sites(csv_path: Path) -> pd.DataFrame:
@@ -73,13 +103,20 @@ def load_sites(csv_path: Path) -> pd.DataFrame:
     if missing:
         raise ValueError(f"CSV missing required columns: {missing}")
 
-    # Google Maps deep link per pin — the "zoom in for detail" handoff.
-    df["gmaps_url"] = (
-        "https://www.google.com/maps/search/?api=1&query="
-        + df["lat"].round(6).astype(str)
-        + ","
-        + df["lon"].round(6).astype(str)
-    )
+    # Google Maps handoff, honest about pin precision: coordinate deep link
+    # only where the pin is placed (exact/approximate); a name+city text
+    # search for city-level pins (the coords are a centroid, not the site);
+    # nothing for symbolic pins (they mark a firm, not a place).
+    def gmaps(row):
+        if row.coord_precision in ("exact", "approximate"):
+            return ("https://www.google.com/maps/search/?api=1&query="
+                    f"{row.lat:.6f},{row.lon:.6f}")
+        if row.coord_precision == "city_level":
+            q = urllib.parse.quote_plus(f"{row.site_name} {row.city}")
+            return f"https://www.google.com/maps/search/?api=1&query={q}"
+        return ""
+
+    df["gmaps_url"] = df.apply(gmaps, axis=1)
     df["tier_label"] = df["tier"].map(TIER_LABELS).fillna(df["tier"])
 
     # Fail loudly on bad coordinates rather than silently dropping pins.
@@ -87,7 +124,10 @@ def load_sites(csv_path: Path) -> pd.DataFrame:
     if not bad.empty:
         raise ValueError(f"Bad coordinates for: {bad['site_id'].tolist()}")
 
-    return df
+    # Tooltip hygiene: no NaN in display fields, no trailing ".0" on power.
+    df["power_mw"] = df["power_mw"].map(
+        lambda v: "" if pd.isna(v) else f"{v:g}")
+    return df.fillna("")
 
 
 def load_paths(paths_csv: Path, sites: pd.DataFrame) -> pd.DataFrame | None:
@@ -162,26 +202,8 @@ def kepler_config(df: pd.DataFrame, with_paths: bool = False) -> dict:
             }
         )
 
-    tooltip_fields = [
-        {"name": f}
-        for f in [
-            "site_name",
-            "operator_or_venue",
-            "firms_linked",
-            "capacity_note",
-            "power_mw",
-            "status",
-            "confidence",
-            "evidence_note",
-            "evidence_url",
-            "gmaps_url",
-        ]
-    ]
-    paths_tooltip = [
-        {"name": f}
-        for f in ["route", "operator", "medium", "status", "confidence",
-                  "evidence_note", "evidence_url"]
-    ]
+    tooltip_fields = [{"name": label} for label in SITE_DISPLAY.values()]
+    paths_tooltip = [{"name": label} for label in PATH_DISPLAY.values()]
     fields_to_show = {t: tooltip_fields for t in TIER_COLORS}
     if with_paths:
         fields_to_show["paths"] = paths_tooltip
@@ -220,9 +242,10 @@ def build(csv_path: Path, out_path: Path, paths_csv: Path | None = None) -> None
     for tier in TIER_COLORS:
         subset = df[df["tier"] == tier].reset_index(drop=True)
         if not subset.empty:
-            m.add_data(data=subset, name=tier)
+            m.add_data(data=subset.rename(columns=SITE_DISPLAY), name=tier)
     if paths is not None:
-        m.add_data(data=paths, name="paths")
+        m.add_data(data=paths.fillna("").rename(columns=PATH_DISPLAY),
+                   name="paths")
 
     m.save_to_html(file_name=str(out_path), read_only=False)
 
