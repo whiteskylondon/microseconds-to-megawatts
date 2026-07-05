@@ -201,7 +201,7 @@ def kepler_config(df: pd.DataFrame, with_paths: bool = False) -> dict:
             "mapState": {
                 "latitude": center_lat,
                 "longitude": center_lon,
-                "zoom": 2.4,
+                "zoom": 1.7,
             },
             "mapStyle": {
                 "styleType": CARTO_DARK["id"],

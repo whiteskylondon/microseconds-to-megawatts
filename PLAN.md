@@ -2,10 +2,12 @@
 
 ## Phase 1 — Foundation hygiene
 - [ ] Geocode-verify all seed coordinates against documented addresses; set
-      coord_precision=exact where verified
+      coord_precision=exact where verified (pipeline/geocode.py exists;
+      T1-004/T2-003 done via enrichment pass 1; original seed rows pending)
 - [ ] Replace verify_url_hint with real evidence_url for all 19 seed records
-- [ ] Add pytest data-validation suite (schema, coordinate bounds, confidence
-      enum, URL presence for confirmed records) — run in CI
+      (done for T1-003/T1-005/T1-010/T2-001..004/T3-002 via enrichment pass 1)
+- [x] Add pytest data-validation suite (schema, coordinate bounds, confidence
+      enum, URL presence for post-enrichment records) — CI wiring pending
 
 ## Phase 2 — Tier 2 extraction (the towers)
 - [ ] pipeline/fcc_uls.py: pull FCC ULS Part 101 licenses for known
@@ -14,16 +16,22 @@
 - [ ] FCC experimental license pull (shortwave sites)
 - [ ] Ofcom fixed-links register extraction (London–Slough–coast paths)
 - [ ] ANFR Cartoradio: French relay sites on the London–Frankfurt corridor
-- [ ] Add kepler arc layer for paths.csv
+      (Tour de Reuze pinned from ANFR-derived data; bulk extraction pending;
+      German-side relays entirely unmapped)
+- [x] Add kepler arc layer for paths.csv (39 arcs shipped in enrichment pass 1)
 
 ## Phase 3 — Tier 3 expansion (the compute story)
-- [ ] XTX: pin Kajaani precisely (Sokajärventie site), add second building,
-      Iceland (Verne Global) with sources
-- [ ] Job-ad triangulation pass: Jane Street, HRT, Two Sigma, DE Shaw, Jump —
-      infrastructure roles with locations
+- [x] XTX: add second building (T3-017, YIT-sourced), Iceland Verne campus
+      enriched with operator sources (T3-002); precise Kajaani geocode pending
+- [ ] Job-ad triangulation pass: Jane Street, HRT, Two Sigma, Jump, G-Research
+      done in enrichment pass 1; DE Shaw still outstanding
 - [ ] Renaissance: Brookhaven planning/permit search; document the null result
       if null
-- [ ] Power-capacity column normalization (MW where public)
+- [x] Power-capacity column normalization (power_mw column; source-stated
+      values only: B3 10, KIO SF2 1.137, MOEX 9.5, Verne 140, XTX 22.5, HF ~3)
+- [ ] Negative-space annotation (LatAm/Africa research-compute absence):
+      decided NOT to add unsourced symbolic pins — implement as a map/essay
+      annotation instead (rule 1 forbids pins without sources)
 
 ## Phase 4 — Publication build
 - [ ] Decide renderer: kepler standalone vs MapLibre page (embed weight, link

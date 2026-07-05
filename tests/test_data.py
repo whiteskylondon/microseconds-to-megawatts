@@ -31,7 +31,7 @@ STATUS = {"active", "historical", "under_construction"}
 EVIDENCE_TYPES = {
     "spectrum_license", "planning_docs", "exchange_docs",
     "corporate_announcement", "operator_docs", "press",
-    "regulatory_docs", "academic",
+    "regulatory_docs", "academic", "job_posting",
 }
 MEDIA = {"microwave", "mm-wave", "laser", "shortwave", "fiber"}
 

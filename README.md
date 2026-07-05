@@ -23,7 +23,7 @@ documented quant/HFT infrastructure, with an evidence grade on every record.
 | `tier` | `execution` (exchange colo) / `network` (microwave, shortwave) / `research` (ML compute) |
 | `coord_precision` | `exact` (verified address/geocode) / `approximate` (needs verification) / `city_level` / `symbolic` (no single site exists, e.g. cloud usage) |
 | `confidence` | `confirmed` (primary source: license, filing, corporate announcement) / `reported` (credible press) / `inferred` (triangulated from job ads, LinkedIn, network data) |
-| `evidence_type` | `spectrum_license` / `planning_docs` / `exchange_docs` / `corporate_announcement` / `operator_docs` / `press` / `regulatory_docs` / `academic` |
+| `evidence_type` | `spectrum_license` / `planning_docs` / `exchange_docs` / `corporate_announcement` / `operator_docs` / `press` / `regulatory_docs` / `academic` / `job_posting` |
 | `status` | `active` / `historical` (e.g. Basildon, Moscow) / `under_construction` |
 | `power_mw` | numeric IT/campus power where a public source states it; blank otherwise |
 | `evidence_url` | working public URL for the strongest source backing the record |
