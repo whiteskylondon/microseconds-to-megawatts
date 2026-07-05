@@ -35,6 +35,7 @@ SITES_CSV = ROOT / "data" / "sites_seed.csv"
 PATHS_CSV = ROOT / "data" / "paths.csv"
 RESULTS = ROOT / "data" / "raw" / "enrichment_results.json"
 RERUN = ROOT / "data" / "raw" / "tokyo_osaka_rerun.json"
+SPECS = ROOT / "data" / "raw" / "compute_specs_facts.json"
 OUT_CSV = ROOT / "data" / "evidence.csv"
 
 COLUMNS = ["ref_id", "ref_type", "source_no", "url", "publisher", "supports", "quote"]
@@ -73,6 +74,21 @@ def _record_evidence(by_key: dict) -> dict[str, list[dict]]:
             tgt = rec.get("merge_with_existing_site_id")
             if tgt:
                 attach(tgt, rec.get("evidence"))
+
+    # Compute-specs gap-fill: each verified fact whose applies_to is a real
+    # site_id contributes its source. (firmwide / new-facility facts skipped —
+    # they aren't tied to a single pin.)
+    if SPECS.exists():
+        for firm in json.loads(SPECS.read_text())["result"]["results"]:
+            for f in firm.get("final_facts") or []:
+                sid = f.get("applies_to", "")
+                if sid.startswith("T3-"):
+                    attach(sid, [{
+                        "url": f["url"],
+                        "publisher": f.get("publisher", ""),
+                        "supports": f"{f['fact_type']}: {f['value']}",
+                        "quote": f.get("quote", ""),
+                    }])
 
     return out
 
