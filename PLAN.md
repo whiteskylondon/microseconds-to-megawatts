@@ -1,11 +1,13 @@
 # PLAN.md — phased milestones
 
 ## Phase 1 — Foundation hygiene
-- [ ] Geocode-verify all seed coordinates against documented addresses; set
-      coord_precision=exact where verified (pipeline/geocode.py exists;
-      T1-004/T2-003 done via enrichment pass 1; original seed rows pending)
-- [ ] Replace verify_url_hint with real evidence_url for all 19 seed records
-      (done for T1-003/T1-005/T1-010/T2-001..004/T3-002 via enrichment pass 1)
+- [x] Geocode-verify all seed coordinates against documented addresses; set
+      coord_precision=exact where verified (all 19 original seed rows done;
+      exact where the address resolved to a building/POI; T1-007/T1-008/T3-001
+      stay approximate — campus-/postcode-/street-level is the honest limit;
+      T1-010/T2-001/T2-002/T2-004 stay approximate — no public precise address)
+- [x] Replace verify_url_hint with real evidence_url for all 19 seed records
+      (every seed row now carries a fetch-verified URL; hints cleared)
 - [x] Add pytest data-validation suite (schema, coordinate bounds, confidence
       enum, URL presence for post-enrichment records) — CI wiring pending
 
@@ -22,7 +24,8 @@
 
 ## Phase 3 — Tier 3 expansion (the compute story)
 - [x] XTX: add second building (T3-017, YIT-sourced), Iceland Verne campus
-      enriched with operator sources (T3-002); precise Kajaani geocode pending
+      enriched with operator sources (T3-002); campus now pinned street-level
+      at Sokajärventie (Pohjan Sellu plot per Yle); plot-level pin pending
 - [ ] Job-ad triangulation pass: Jane Street, HRT, Two Sigma, Jump, G-Research
       done in enrichment pass 1; DE Shaw still outstanding
 - [ ] Renaissance: Brookhaven planning/permit search; document the null result
