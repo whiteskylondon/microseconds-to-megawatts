@@ -1,0 +1,740 @@
+{
+ "1700 MacArthur Blvd, Mahwah, NJ, USA": [
+  {
+   "place_id": 355464468,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1103735676,
+   "lat": "41.0769546",
+   "lon": "-74.1681478",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05338627832455936,
+   "addresstype": "road",
+   "name": "MacArthur Boulevard",
+   "display_name": "MacArthur Boulevard, Ramapo Ridge, Mahwah, Bergen County, New Jersey, 07430, United States",
+   "boundingbox": [
+    "41.0749772",
+    "41.0781922",
+    "-74.1688415",
+    "-74.1665397"
+   ]
+  },
+  {
+   "place_id": 357698713,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1103787315,
+   "lat": "41.0768403",
+   "lon": "-74.1679880",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05338627832455936,
+   "addresstype": "road",
+   "name": "MacArthur Boulevard",
+   "display_name": "MacArthur Boulevard, Darlington Ridge, Mahwah, Bergen County, New Jersey, 07430, United States",
+   "boundingbox": [
+    "41.0749411",
+    "41.0780524",
+    "-74.1686506",
+    "-74.1664725"
+   ]
+  },
+  {
+   "place_id": 355464344,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1084370838,
+   "lat": "41.0800137",
+   "lon": "-74.1537545",
+   "category": "highway",
+   "type": "secondary",
+   "place_rank": 26,
+   "importance": 0.05338627832455936,
+   "addresstype": "road",
+   "name": "MacArthur Boulevard",
+   "display_name": "MacArthur Boulevard, Mahwah, Bergen County, New Jersey, 07430, United States",
+   "boundingbox": [
+    "41.0796811",
+    "41.0805586",
+    "-74.1557749",
+    "-74.1517855"
+   ]
+  }
+ ],
+ "1400 Federal Blvd, Carteret, NJ, USA": [
+  {
+   "place_id": 358428435,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 729376485,
+   "lat": "40.5845104",
+   "lon": "-74.2433378",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 4.930113679708579e-05,
+   "addresstype": "building",
+   "name": "",
+   "display_name": "1400, Federal Boulevard, West Carteret, Carteret, Middlesex County, New Jersey, 07008, United States",
+   "boundingbox": [
+    "40.5836035",
+    "40.5851402",
+    "-74.2442719",
+    "-74.2424908"
+   ]
+  }
+ ],
+ "755 Secaucus Road, Secaucus, NJ, USA": [
+  {
+   "place_id": 356702662,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 193611211,
+   "lat": "40.7764281",
+   "lon": "-74.0697759",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 5.413977264052823e-05,
+   "addresstype": "building",
+   "name": "Equinix New York Secaucus NY4",
+   "display_name": "Equinix New York Secaucus NY4, 755, Secaucus Road, Harmon Cove, Secaucus, Hudson County, New Jersey, 07094, United States",
+   "boundingbox": [
+    "40.7750190",
+    "40.7778372",
+    "-74.0709786",
+    "-74.0685732"
+   ]
+  },
+  {
+   "place_id": 401148145,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1418874942,
+   "lat": "40.7779843",
+   "lon": "-74.0669128",
+   "category": "place",
+   "type": "house",
+   "place_rank": 30,
+   "importance": 9.99999999995449e-06,
+   "addresstype": "place",
+   "name": "",
+   "display_name": "755, Secaucus Road, Harmon Cove, Secaucus, Hudson County, New Jersey, 07094, United States",
+   "boundingbox": [
+    "40.7779343",
+    "40.7780343",
+    "-74.0669628",
+    "-74.0668628"
+   ]
+  }
+ ],
+ "2905 Diehl Road, Aurora, IL, USA": [
+  {
+   "place_id": 391375258,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 985022660,
+   "lat": "41.7980454",
+   "lon": "-88.2435528",
+   "category": "place",
+   "type": "house",
+   "place_rank": 30,
+   "importance": 9.99999999995449e-06,
+   "addresstype": "place",
+   "name": "",
+   "display_name": "2905, Diehl Road, Aurora, Naperville Township, DuPage County, Illinois, 60502, United States",
+   "boundingbox": [
+    "41.7979954",
+    "41.7980954",
+    "-88.2436028",
+    "-88.2435028"
+   ]
+  }
+ ],
+ "600 Route 25A, East Setauket, NY, USA": [
+  {
+   "place_id": 359942356,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 11726079,
+   "lat": "40.9306787",
+   "lon": "-73.1106018",
+   "category": "office",
+   "type": "company",
+   "place_rank": 30,
+   "importance": 0.34223694096820295,
+   "addresstype": "office",
+   "name": "Renaissance Technologies",
+   "display_name": "Renaissance Technologies, 600, Route 25A, Setauket, Town of Brookhaven, Suffolk County, New York, 11733, United States",
+   "boundingbox": [
+    "40.9301065",
+    "40.9312472",
+    "-73.1121854",
+    "-73.1102181"
+   ]
+  }
+ ],
+ "8 Chun Yat Street, Tseung Kwan O, Hong Kong": [
+  {
+   "place_id": 234148974,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 28280025,
+   "lat": "22.2902230",
+   "lon": "114.2748445",
+   "category": "highway",
+   "type": "unclassified",
+   "place_rank": 26,
+   "importance": 0.053398824292362826,
+   "addresstype": "road",
+   "name": "駿日街 Chun Yat Street",
+   "display_name": "駿日街 Chun Yat Street, 大赤沙 Tai Chik Sha, 西貢區 Sai Kung District, 新界 New Territories, 香港 Hong Kong, 中国",
+   "boundingbox": [
+    "22.2899916",
+    "22.2904192",
+    "114.2742572",
+    "114.2754389"
+   ]
+  },
+  {
+   "place_id": 234702291,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1235184376,
+   "lat": "22.2896454",
+   "lon": "114.2733054",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.053398824292362826,
+   "addresstype": "road",
+   "name": "駿日街 Chun Yat Street",
+   "display_name": "駿日街 Chun Yat Street, 大赤沙 Tai Chik Sha, 西貢區 Sai Kung District, 新界 New Territories, 香港 Hong Kong, 中国",
+   "boundingbox": [
+    "22.2895853",
+    "22.2897055",
+    "114.2731655",
+    "114.2734452"
+   ]
+  },
+  {
+   "place_id": 237170169,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 135187066,
+   "lat": "22.2897974",
+   "lon": "114.2739412",
+   "category": "highway",
+   "type": "residential",
+   "place_rank": 26,
+   "importance": 0.053398824292362826,
+   "addresstype": "road",
+   "name": "駿日街 Chun Yat Street",
+   "display_name": "駿日街 Chun Yat Street, 大赤沙 Tai Chik Sha, 西貢區 Sai Kung District, 新界 New Territories, 香港 Hong Kong, 中国",
+   "boundingbox": [
+    "22.2897618",
+    "22.2898357",
+    "114.2738578",
+    "114.2740234"
+   ]
+  }
+ ],
+ "Kruppstraße 121, Frankfurt am Main, Germany": [
+  {
+   "place_id": 137644284,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 31430981,
+   "lat": "50.1422542",
+   "lon": "8.7407120",
+   "category": "building",
+   "type": "commercial",
+   "place_rank": 30,
+   "importance": 7.941481651021618e-05,
+   "addresstype": "building",
+   "name": "",
+   "display_name": "121, Kruppstraße, Seckbach, Ost, Frankfurt am Main, Hessen, 60388, Deutschland",
+   "boundingbox": [
+    "50.1416103",
+    "50.1427211",
+    "8.7399912",
+    "8.7414326"
+   ]
+  }
+ ],
+ "Via San Clemente 53, Ponte San Pietro, Italy": [
+  {
+   "place_id": 75466337,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 195822682,
+   "lat": "45.7055494",
+   "lon": "9.5911666",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05338257190814065,
+   "addresstype": "road",
+   "name": "Via San Clemente",
+   "display_name": "Via San Clemente, Locate Bergamasco, Ponte San Pietro, Bergamo, Lombardia, 24036, Italia",
+   "boundingbox": [
+    "45.7041538",
+    "45.7069265",
+    "9.5903336",
+    "9.5919690"
+   ]
+  },
+  {
+   "place_id": 75140779,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 171648862,
+   "lat": "45.7017165",
+   "lon": "9.5930498",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05338257190814065,
+   "addresstype": "road",
+   "name": "Via San Clemente",
+   "display_name": "Via San Clemente, Ponte San Pietro, Bergamo, Lombardia, 24036, Italia",
+   "boundingbox": [
+    "45.7009737",
+    "45.7024577",
+    "9.5928817",
+    "9.5931998"
+   ]
+  }
+ ],
+ "Sokajärventie, Kajaani, Finland": [
+  {
+   "place_id": 270619930,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 232912216,
+   "lat": "64.2231236",
+   "lon": "27.6817429",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05339375677119093,
+   "addresstype": "road",
+   "name": "Sokajärventie",
+   "display_name": "Sokajärventie, Lohtaja, Kajaani, Kajaanin seutukunta, Kainuu, Manner-Suomi, 87700, Suomi / Finland",
+   "boundingbox": [
+    "64.2217499",
+    "64.2244478",
+    "27.6774283",
+    "27.6860415"
+   ]
+  },
+  {
+   "place_id": 270619772,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 16353569,
+   "lat": "64.2212966",
+   "lon": "27.6873996",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05339375677119093,
+   "addresstype": "road",
+   "name": "Sokajärventie",
+   "display_name": "Sokajärventie, Purola, Kajaani, Kajaanin seutukunta, Kainuu, Manner-Suomi, 87700, Suomi / Finland",
+   "boundingbox": [
+    "64.2206412",
+    "64.2217499",
+    "27.6860415",
+    "27.6886721"
+   ]
+  },
+  {
+   "place_id": 272082513,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 232912219,
+   "lat": "64.2202214",
+   "lon": "27.6890886",
+   "category": "highway",
+   "type": "primary",
+   "place_rank": 26,
+   "importance": 0.05339375677119093,
+   "addresstype": "road",
+   "name": "Sokajärventie",
+   "display_name": "Sokajärventie, Purola, Kajaani, Kajaanin seutukunta, Kainuu, Manner-Suomi, 87700, Suomi / Finland",
+   "boundingbox": [
+    "64.2197559",
+    "64.2206798",
+    "27.6883859",
+    "27.6897868"
+   ]
+  }
+ ],
+ "Renforsin Ranta, Kajaani, Finland": [
+  {
+   "place_id": 272270463,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 109357529,
+   "lat": "64.2338611",
+   "lon": "27.6867675",
+   "category": "landuse",
+   "type": "industrial",
+   "place_rank": 24,
+   "importance": 0.0800604234378576,
+   "addresstype": "industrial",
+   "name": "Renforsin Ranta",
+   "display_name": "Renforsin Ranta, Purola, Kajaani, Kajaanin seutukunta, Kainuu, Manner-Suomi, Suomi / Finland",
+   "boundingbox": [
+    "64.2298469",
+    "64.2377057",
+    "27.6693678",
+    "27.7066632"
+   ]
+  }
+ ],
+ "NYSE Data Center, Mahwah, NJ, USA": [
+  {
+   "place_id": 358308346,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 472761713,
+   "lat": "41.0780614",
+   "lon": "-74.1529147",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 5.29449912260169e-05,
+   "addresstype": "building",
+   "name": "NYSE Data Center",
+   "display_name": "NYSE Data Center, MacArthur Boulevard, Mahwah, Bergen County, New Jersey, 07430, United States",
+   "boundingbox": [
+    "41.0771367",
+    "41.0794963",
+    "-74.1533716",
+    "-74.1524523"
+   ]
+  }
+ ],
+ "1700 MacArthur Boulevard, Mahwah, NJ 07430, USA": [
+  {
+   "place_id": 400958658,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1084370838,
+   "lat": "41.0801838",
+   "lon": "-74.1532413",
+   "category": "place",
+   "type": "house",
+   "place_rank": 30,
+   "importance": 9.99999999995449e-06,
+   "addresstype": "place",
+   "name": "",
+   "display_name": "1700, MacArthur Boulevard, Mahwah, Bergen County, New Jersey, 07430, United States",
+   "boundingbox": [
+    "41.0801338",
+    "41.0802338",
+    "-74.1532913",
+    "-74.1531913"
+   ]
+  }
+ ],
+ "HKEX Data Centre, Tseung Kwan O, Hong Kong": [
+  {
+   "place_id": 237580343,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 290393395,
+   "lat": "22.2853619",
+   "lon": "114.2733701",
+   "category": "landuse",
+   "type": "industrial",
+   "place_rank": 24,
+   "importance": 0.0800654909590295,
+   "addresstype": "industrial",
+   "name": "香港交易所將軍澳數據中心 HKEx Tseung Kwan O Data Centre",
+   "display_name": "香港交易所將軍澳數據中心 HKEx Tseung Kwan O Data Centre, 1, 大赤沙 Tai Chik Sha, 西貢區 Sai Kung District, 新界 New Territories, 香港 Hong Kong, 中国",
+   "boundingbox": [
+    "22.2845639",
+    "22.2860009",
+    "114.2727844",
+    "114.2739361"
+   ]
+  },
+  {
+   "place_id": 234259973,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 290393396,
+   "lat": "22.2852792",
+   "lon": "114.2733607",
+   "category": "building",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 6.549095902948069e-05,
+   "addresstype": "building",
+   "name": "香港交易所將軍澳數據中心 HKEx Tseung Kwan O Data Centre",
+   "display_name": "香港交易所將軍澳數據中心 HKEx Tseung Kwan O Data Centre, 1, 駿盈街 Chun Ying Street, 大赤沙 Tai Chik Sha, 西貢區 Sai Kung District, 新界 New Territories, 香港 Hong Kong, 中国",
+   "boundingbox": [
+    "22.2847284",
+    "22.2858299",
+    "114.2729292",
+    "114.2737922"
+   ]
+  }
+ ],
+ "駿日街8號, 將軍澳, 香港": [],
+ "Aruba Global Cloud Data Center, Ponte San Pietro, Italy": [],
+ "Via San Clemente, 53, 24036 Ponte San Pietro BG, Italy": [
+  {
+   "place_id": 75222617,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 195822682,
+   "lat": "45.7055494",
+   "lon": "9.5911666",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05338257190814065,
+   "addresstype": "road",
+   "name": "Via San Clemente",
+   "display_name": "Via San Clemente, Locate Bergamasco, Ponte San Pietro, Bergamo, Lombardia, 24036, Italia",
+   "boundingbox": [
+    "45.7041538",
+    "45.7069265",
+    "9.5903336",
+    "9.5919690"
+   ]
+  },
+  {
+   "place_id": 75145065,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 171648862,
+   "lat": "45.7017165",
+   "lon": "9.5930498",
+   "category": "highway",
+   "type": "tertiary",
+   "place_rank": 26,
+   "importance": 0.05338257190814065,
+   "addresstype": "road",
+   "name": "Via San Clemente",
+   "display_name": "Via San Clemente, Ponte San Pietro, Bergamo, Lombardia, 24036, Italia",
+   "boundingbox": [
+    "45.7009737",
+    "45.7024577",
+    "9.5928817",
+    "9.5931998"
+   ]
+  }
+ ],
+ "Global Cloud Data Center, Ponte San Pietro, Italy": [
+  {
+   "place_id": 75363246,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 263142338,
+   "lat": "45.7047111",
+   "lon": "9.5898482",
+   "category": "landuse",
+   "type": "industrial",
+   "place_rank": 24,
+   "importance": 0.08004923857480732,
+   "addresstype": "industrial",
+   "name": "Aruba S.p.A. – Global Cloud Data Center",
+   "display_name": "Aruba S.p.A. – Global Cloud Data Center, Locate Bergamasco, Ponte San Pietro, Bergamo, Lombardia, 24036, Italia",
+   "boundingbox": [
+    "45.7025281",
+    "45.7067095",
+    "9.5875565",
+    "9.5921391"
+   ]
+  }
+ ],
+ "Aruba, Via San Clemente, Ponte San Pietro, Italy": [],
+ "2 Buckingham Avenue, Slough, SL1 4NB, UK": [
+  {
+   "place_id": 280664150,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 225909390,
+   "lat": "51.5234582",
+   "lon": "-0.6360775",
+   "category": "building",
+   "type": "data_center",
+   "place_rank": 30,
+   "importance": 6.1369497215183e-05,
+   "addresstype": "building",
+   "name": "Equinix LD4",
+   "display_name": "Equinix LD4, 2, Buckingham Avenue, Slough Trading Estate, Cippenham, Chalvey, Slough, England, SL1 4NB, United Kingdom",
+   "boundingbox": [
+    "51.5230375",
+    "51.5238942",
+    "-0.6370135",
+    "-0.6351337"
+   ]
+  }
+ ],
+ "Equinix LD4, Slough, UK": [
+  {
+   "place_id": 279614663,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 225909390,
+   "lat": "51.5234582",
+   "lon": "-0.6360775",
+   "category": "building",
+   "type": "data_center",
+   "place_rank": 30,
+   "importance": 6.1369497215183e-05,
+   "addresstype": "building",
+   "name": "Equinix LD4",
+   "display_name": "Equinix LD4, 2, Buckingham Avenue, Slough Trading Estate, Cippenham, Chalvey, Slough, England, SL1 4NB, United Kingdom",
+   "boundingbox": [
+    "51.5230375",
+    "51.5238942",
+    "-0.6370135",
+    "-0.6351337"
+   ]
+  }
+ ],
+ "zendmast Houtem, Veurne, Belgium": [],
+ "Houtem, Veurne, Belgium": [
+  {
+   "place_id": 100985020,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "relation",
+   "osm_id": 2242982,
+   "lat": "51.0110871",
+   "lon": "2.6077669",
+   "category": "boundary",
+   "type": "administrative",
+   "place_rank": 16,
+   "importance": 0.31977730603466514,
+   "addresstype": "village",
+   "name": "Houtem",
+   "display_name": "Houtem, Veurne, West-Vlaanderen, Vlaanderen, België / Belgique / Belgien",
+   "boundingbox": [
+    "50.9853290",
+    "51.0293015",
+    "2.5709895",
+    "2.6359724"
+   ]
+  }
+ ],
+ "20 Cranes Farm Road, Basildon, UK": [
+  {
+   "place_id": 100073293,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 1077022407,
+   "lat": "51.5793778",
+   "lon": "0.4453443",
+   "category": "highway",
+   "type": "primary",
+   "place_rank": 26,
+   "importance": 0.05338929350728615,
+   "addresstype": "road",
+   "name": "Cranes Farm Road",
+   "display_name": "Cranes Farm Road, Lee Chapel, Basildon, Essex, England, SS14 3UL, United Kingdom",
+   "boundingbox": [
+    "51.5792912",
+    "51.5794644",
+    "0.4449231",
+    "0.4457654"
+   ]
+  },
+  {
+   "place_id": 100068755,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 2937775,
+   "lat": "51.5832915",
+   "lon": "0.4701023",
+   "category": "highway",
+   "type": "primary",
+   "place_rank": 26,
+   "importance": 0.05338929350728615,
+   "addresstype": "road",
+   "name": "Cranes Farm Road",
+   "display_name": "Cranes Farm Road, Basildon, Essex, England, SS14 2GN, United Kingdom",
+   "boundingbox": [
+    "51.5831856",
+    "51.5832966",
+    "0.4698021",
+    "0.4704202"
+   ]
+  },
+  {
+   "place_id": 100088223,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 827448240,
+   "lat": "51.5844846",
+   "lon": "0.4843634",
+   "category": "highway",
+   "type": "primary",
+   "place_rank": 26,
+   "importance": 0.05338929350728615,
+   "addresstype": "road",
+   "name": "Cranes Farm Road",
+   "display_name": "Cranes Farm Road, Basildon, Essex, England, SS14 2TP, United Kingdom",
+   "boundingbox": [
+    "51.5844557",
+    "51.5845131",
+    "0.4840982",
+    "0.4846286"
+   ]
+  }
+ ],
+ "SS14 3DF, Basildon, UK": [
+  {
+   "place_id": 380585093,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "postcode_id": "Pgb:SS14_3DF",
+   "lat": "51.5863100",
+   "lon": "0.4949000",
+   "category": "place",
+   "type": "postcode",
+   "place_rank": 23,
+   "importance": 0.09334333333333333,
+   "addresstype": "postcode",
+   "name": "SS14 3DF",
+   "display_name": "SS14 3DF, Basildon, Essex, England, United Kingdom",
+   "boundingbox": [
+    "51.5800219",
+    "51.5925981",
+    "0.4848060",
+    "0.5049941"
+   ]
+  }
+ ],
+ "830 Brickell Plaza, Miami, FL, USA": [
+  {
+   "place_id": 306360637,
+   "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+   "osm_type": "way",
+   "osm_id": 995060605,
+   "lat": "25.7660038",
+   "lon": "-80.1924327",
+   "category": "office",
+   "type": "yes",
+   "place_rank": 30,
+   "importance": 7.754558632787088e-05,
+   "addresstype": "office",
+   "name": "830 Brickell",
+   "display_name": "830 Brickell, 830, Brickell Plaza, Brickell, Torch of Friendship, Miami, Miami-Dade County, Florida, 33131, United States",
+   "boundingbox": [
+    "25.7656758",
+    "25.7663188",
+    "-80.1927436",
+    "-80.1922016"
+   ]
+  }
+ ]
+}
