@@ -1,91 +1,101 @@
-# FIRMS.md — the mapping target list
+# FIRMS.md — the firm universe
 
-Scope decision doc for the **compute/data-centre** story (Tier 3). Question
-for each firm: *is there a public paper trail for its research/ML compute
-footprint* (announcement, contractor filing, planning/grid record, job ad,
-vendor case study)? If yes → mappable pin. If the firm only has an
-**execution** (exchange-colo) footprint, that's already covered by the Tier 1
-venue pins and is noted here but not a Tier 3 target.
+Defining the universe of quant/HFT firms worth considering for the map,
+**before** any per-firm research. One flat list; classification lives in the
+fields, not in sections.
 
-Status key: ✅ mapped · 🔬 researched, worth a pass · ⬜ candidate, not yet
-researched · ⚠️ likely unmappable (no public compute footprint expected).
+## Ontology
 
----
+- **firm_type** (controlled vocabulary):
+  - `MM/HFT` — market maker / principal high-frequency trader (latency-first)
+  - `Systematic` — systematic hedge fund running its own alpha (stat-arb, CTA)
+  - `Multi-mgr` — multi-strategy platform with quant/systematic pods
+  - `Quant AM` — quant asset manager (long-only, risk-premia, overlay)
+  - `ML-native` — explicitly machine-learning-first fund
+  - `Crypto MM` — digital-asset market maker (adjacent to the core story)
+- **continent** — North America · Europe · Asia
+- **mapped** — existing Tier-3 record id(s), or `—` if not yet on the map
+- **notes** — HQ city, compute signal, caveats. `★` = best public-paper-trail
+  odds (suggested for the first research pass).
 
-## A. Already mapped (Tier 3)
+Mapping question per firm: *is there a public paper trail for its
+research/ML compute* (announcement, contractor/grid filing, planning record,
+job ad, vendor case study)? A firm with only an **execution** (exchange-colo)
+footprint is already covered by the Tier-1 venue pins — noted, but not a
+Tier-3 target on its own.
 
-| firm | records | note |
-|---|---|---|
-| XTX Markets | T3-001/002/017 | Kajaani (22.5MW, u/c) + Iceland/Verne + building 2 |
-| High-Flyer / DeepSeek | T3-005/006 | Fire-Flyer 2 + Ulanqab |
-| Ubiquant | T3-007 | Bei Ming cluster |
-| Minghong | T3-008 | 1,500 GPU / 400 PFlops |
-| Jane Street | T3-009/010 | Dallas DC + CoreWeave |
-| Hudson River Trading | T3-011/012 | Lefdal Mine + cloud |
-| Two Sigma | T3-013 | private DCs + GCP |
-| G-Research | T3-014 | multiple 8MW halls |
-| Jump Trading | T3-015/016 | Vera Rubin + Carrollton |
-| Citadel Securities | T3-003 | Google Cloud (1M+ cores) |
-| Renaissance Technologies | T3-004 | East Setauket (50k cores) |
+## The universe
 
-## B. Named by Daniel — research next
+| firm | country | continent | firm_type | mapped | notes |
+|---|---|---|---|---|---|
+| AQR Capital | USA | North America | Quant AM | — | Greenwich CT; factor/risk-premia, more CPU than GPU |
+| Akuna Capital | USA | North America | MM/HFT | — | Chicago; options MM |
+| Balyasny (BAM) | USA | North America | Multi-mgr | — | Chicago; quant pods |
+| Bridgewater | USA | North America | Systematic | — | Westport CT; systematic macro, not a GPU-ML story |
+| Chicago Trading Co (CTC) | USA | North America | MM/HFT | — | Chicago; options |
+| Citadel (hedge fund) | USA | North America | Multi-mgr | — | Miami/Chicago; distinct from Citadel Securities |
+| Citadel Securities | USA | North America | MM/HFT | T3-003 | ★ Miami HQ; Google Cloud (1M+ cores) |
+| Cumberland (DRW) | USA | North America | Crypto MM | — | Chicago; DRW's crypto arm |
+| D.E. Shaw | USA | North America | Multi-mgr | — | ★ NYC; Anton supercomputers published (but molecular-dynamics research, not trading) |
+| DRW | USA | North America | MM/HFT | — | Chicago; Vigilant Global towers (Tier 2) |
+| ExodusPoint | USA | North America | Multi-mgr | — | NYC |
+| Five Rings | USA | North America | MM/HFT | — | NYC |
+| GTS | USA | North America | MM/HFT | — | NYC; NYSE DMM |
+| Headlands Technologies | USA | North America | MM/HFT | — | Chicago |
+| Hudson River Trading | USA | North America | MM/HFT | T3-011/012 | ★ NYC; Lefdal Mine (Norway) + cloud |
+| Jane Street | USA | North America | MM/HFT | T3-009/010 | ★ NYC; Dallas GPU DC + CoreWeave |
+| Jump Trading | USA | North America | MM/HFT | T3-015/016 | ★ Chicago; Vera Rubin + Carrollton TX |
+| Millennium | USA | North America | Multi-mgr | — | NYC |
+| Old Mission | USA | North America | MM/HFT | — | Chicago/NYC |
+| PDT Partners | USA | North America | Systematic | — | NYC; ex-Morgan Stanley quant |
+| Point72 / Cubist | USA | North America | Multi-mgr | — | ★ Stamford CT; Cubist systematic; public AI push |
+| Quantlab | USA | North America | MM/HFT | — | Houston |
+| Radix Trading | USA | North America | MM/HFT | — | Chicago |
+| Renaissance Technologies | USA | North America | Systematic | T3-004 | East Setauket NY; 50k cores (firm-published), site scale undisclosed |
+| Susquehanna (SIG) | USA | North America | MM/HFT | — | ★ Bala Cynwyd PA |
+| Tower Research Capital | USA | North America | MM/HFT | — | NYC; shortwave (Alpine, Tier 2) |
+| Two Sigma | USA | North America | Systematic | T3-013 | NYC; private DCs + Google Cloud |
+| Virtu Financial | USA | North America | MM/HFT | — | NYC; New Line Networks towers (Tier 2) |
+| Voleon Group | USA | North America | ML-native | — | ★ Berkeley CA; ML-first |
+| Wolverine Trading | USA | North America | MM/HFT | — | Chicago |
+| WorldQuant | USA | North America | Systematic | — | ★ Old Greenwich CT; alpha factory |
+| Aspect Capital | UK | Europe | Systematic | — | London; CTA |
+| Assenagon | Germany | Europe | Quant AM | — | Munich; ~€50bn; likely a documented null (not a GPU-ML/DC shop) |
+| Cantab (GAM Systematic) | UK | Europe | Systematic | — | Cambridge |
+| Capital Fund Management (CFM) | France | Europe | Systematic | — | ★ Paris; Bouchaud; academic-grade research compute |
+| Flow Traders | Netherlands | Europe | MM/HFT | — | Amsterdam |
+| Florin Court | UK | Europe | Systematic | — | London; alt-markets CTA |
+| G-Research | UK | Europe | Systematic | T3-014 | London; multiple 8MW halls; Dallas infra hub |
+| GSA Capital | UK | Europe | Systematic | — | London |
+| IMC Trading | Netherlands | Europe | MM/HFT | — | ★ Amsterdam; shortwave (West Chicago, Tier 2) |
+| Man Group (AHL/Numeric) | UK | Europe | Systematic | — | ★ London; public tech talks |
+| Marshall Wace (TOPS) | UK | Europe | Systematic | — | London; signals engine |
+| Optiver | Netherlands | Europe | MM/HFT | — | ★ Amsterdam |
+| Quadrature Capital | UK | Europe | Systematic | — | London |
+| Qube Research & Technologies | UK | Europe | Systematic | — | ★ London/Geneva; ex-Credit Suisse systematic, ~$28bn |
+| Squarepoint Capital | UK | Europe | Systematic | — | London/Paris/NY |
+| Systematica | Switzerland | Europe | Systematic | — | Geneva/Jersey |
+| Winton | UK | Europe | Systematic | — | London |
+| Wintermute | UK | Europe | Crypto MM | — | London; crypto (adjacent) |
+| XTX Markets | UK | Europe | MM/HFT | T3-001/002/017 | London; Kajaani campus + Verne (Iceland) |
+| Baiont Quant | China | Asia | ML-native | — | Nanjing; ML-first |
+| High-Flyer / DeepSeek | China | Asia | Systematic + ML-native | T3-005/006 | Hangzhou; Fire-Flyer clusters + Ulanqab |
+| Lingjun Investment (灵均) | China | Asia | Systematic | — | Beijing |
+| Minghong (明汯) | China | Asia | Systematic | T3-008 | Shanghai; 1,500 GPU / 400 PFlops |
+| Ubiquant (九坤) | China | Asia | Systematic | T3-007 | Beijing; Bei Ming cluster |
+| Yanfu (衍复) | China | Asia | Systematic | — | Shanghai |
+| Amber Group | Singapore | Asia | Crypto MM | — | Singapore/HK; crypto (adjacent) |
 
-| firm | HQ | why it matters | expectation |
-|---|---|---|---|
-| ⬜ Qube Research & Technologies (QRT) | London / Geneva | ~$28bn systematic, spun out of Credit Suisse 2020; heavy compute buyer | real cluster, likely **undisclosed** — job-ad / vendor triangulation |
-| ⬜ Capital Fund Management (CFM) | Paris | one of the oldest quant funds (Bouchaud); academic-grade research compute | possible FR planning/press; else symbolic HQ pin |
-| ⚠️ Assenagon | Munich | ~€50bn quant/derivatives-overlay asset manager | **not an HFT/GPU-ML shop** — a compute footprint is unlikely to be public; low priority |
+## Open questions for defining the universe
 
-## C. Big systematic / ML funds — strong candidates (⬜ unless noted)
-
-| firm | HQ | compute signal |
-|---|---|---|
-| ⬜ D.E. Shaw | New York | Anton special-purpose supercomputers (molecular dynamics) are *published*; trading compute separate |
-| ⬜ Millennium | New York | huge multi-manager; compute mostly undisclosed |
-| ⬜ Point72 / Cubist | Stamford CT | systematic unit; Aurora AI push publicised |
-| ⬜ Man Group (AHL / Numeric) | London | systematic pioneer; some public tech talks |
-| ⬜ Squarepoint Capital | London / NY | large systematic, quiet |
-| ⬜ PDT Partners | New York | ex-Morgan Stanley quant |
-| ⬜ Voleon Group | Berkeley CA | explicitly ML-first |
-| ⬜ WorldQuant | Old Greenwich CT | alpha factory, big compute |
-| ⬜ Marshall Wace (TOPS) | London | systematic signals engine |
-| ⬜ Winton | London | systematic, research-heavy |
-| ⬜ AQR Capital | Greenwich CT | factor/quant, more CPU than GPU |
-| ⚠️ Bridgewater | Westport CT | systematic macro, but not a GPU-ML/DC story |
-
-## D. HFT / market makers — mostly a Tier-1 (execution) story
-
-These live in exchange colos (already pinned as Tier 1 tenants). Add a Tier-3
-pin **only** if a distinct research/ML compute site is publicly documented.
-
-| firm | Tier-1 presence | Tier-3 compute signal? |
-|---|---|---|
-| ⬜ Optiver | mapped as colo tenant | Amsterdam/Chicago; watch for GPU build-out |
-| ⬜ IMC Trading | colo tenant + shortwave (T2-004) | Amsterdam/Chicago |
-| ⬜ Flow Traders | colo tenant | Amsterdam |
-| ⬜ Tower Research Capital | colo + shortwave (Alpine) | — |
-| ⬜ DRW / Cumberland | colo + towers (Vigilant) | crypto + research |
-| ⬜ Susquehanna (SIG) | colo tenant | Bala Cynwyd PA |
-| ⬜ Virtu Financial | colo + towers (New Line) | — |
-| ⬜ Citadel (the hedge fund) | vs Citadel Securities | distinct research compute |
-| ⚠️ GTS, Radix, Headlands, CTC, Akuna, Wolverine, Five Rings, Maven | colo tenants | small; compute footprint unlikely public |
-
-## E. Asian quants beyond the three mapped (⬜)
-
-| firm | note |
-|---|---|
-| ⬜ Lingjun Investment (灵均) | large Chinese quant |
-| ⬜ Baiont / BaiontQuant | ML-native, Nanjing |
-| ⬜ Yanfu Investments (衍复) | large Chinese quant |
-| ⬜ Zhuke / Zhuoshi, Mingshi (明世) | mid-size, check for public compute |
-
----
-
-## Recommended first pass (research batch)
-
-Highest odds of a *real public paper trail* → do these first:
-**Qube, CFM, D.E. Shaw (Anton), Point72/Cubist, Man Group, WorldQuant,
-Voleon, Optiver, IMC, Susquehanna.**
-
-Everything else stays ⬜ until we confirm scope. Firms marked ⚠️ are expected
-to yield a documented **null** (absence is a finding) rather than a pin.
+1. **Scope of firm_type** — do we include `MM/HFT` firms that only have an
+   *execution* footprint (most of the Chicago/Amsterdam market makers), or
+   restrict Tier-3 to firms with a distinct *compute* site? Right now they're
+   listed but most will yield "execution-only, see Tier 1".
+2. **Crypto MM** — in or out? Listed as adjacent; easy to drop.
+3. **Multi-manager vs the trading entity** — Citadel LLC vs Citadel
+   Securities, DRW vs Cumberland: keep as separate rows (done) or merge?
+4. **Asia depth** — the Chinese quant list can go much deeper (dozens of
+   ≥¥10bn firms); how far down do we want to go?
+5. **Coverage gaps** — Middle East (sovereign quant?), India (uTrade, iRage),
+   Japan/Korea prop shops: worth a row each, or out of scope?
