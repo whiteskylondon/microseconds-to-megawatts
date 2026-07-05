@@ -19,8 +19,12 @@ documented quant/HFT infrastructure, with an evidence grade on every record.
   source count per pin
 - `pipeline/geocode.py` — Nominatim geocoder (rate-limited, cached) for
   verifying coordinates against documented addresses
-- `docs/index.html` — output (tracked; auto-deployed to GitHub Pages via
-  `.github/workflows/pages.yml`); embeddable in Ghost via iframe
+- `docs/index.html` — the full three-layer kepler map (tracked; auto-deployed
+  to GitHub Pages via `.github/workflows/pages.yml`); embeddable via iframe
+- `docs/compute.html` — the compute-layer view ("The megawatts of quant AI"):
+  a deck.gl page where each data centre is a 3D extruded column, height and
+  orange-red colour = disclosed power (MW); undisclosed sites show as dots.
+  Built by `pipeline/build_compute_view.py`. HQ→data-centre arcs planned
 - `ENRICHMENT.md` — candidate records awaiting research/verification
 
 Regenerate derived files after editing `sites_seed.csv`:

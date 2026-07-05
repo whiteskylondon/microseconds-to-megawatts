@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quant AI compute — megawatts</title>
+<link href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.5.0/dist/maplibre-gl.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.5.0/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/deck.gl@9.0.32/dist.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #0a0a0f; }
+  #map { position: absolute; inset: 0; }
+  .panel { position: absolute; z-index: 2; color: #e8e6e3;
+    font: 13px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  #title { top: 14px; left: 16px; max-width: 340px; }
+  #title h1 { font-size: 16px; font-weight: 600; margin: 0 0 4px; }
+  #title p { margin: 0; color: #9a978f; font-size: 12px; }
+  #legend { bottom: 16px; left: 16px; background: rgba(16,16,22,0.78);
+    border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 10px 12px; }
+  #legend .bar { height: 9px; width: 180px; border-radius: 3px;
+    background: linear-gradient(90deg, #fac775, #ef7f2a, #b2182b); margin: 5px 0 3px; }
+  #legend .row { display: flex; justify-content: space-between; font-size: 11px; color: #9a978f; }
+  #legend .note { margin-top: 7px; font-size: 11px; color: #9a978f; max-width: 210px; }
+  #legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: #7f8a99; border: 1px solid rgba(255,255,255,0.5); vertical-align: 1px; margin-right: 3px; }
+  .deck-tooltip { font: 12px/1.45 -apple-system, sans-serif !important;
+    background: rgba(16,16,22,0.92) !important; border: 1px solid rgba(255,255,255,0.16) !important;
+    border-radius: 6px !important; color: #e8e6e3 !important; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+<div id="title" class="panel">
+  <h1>The megawatts of quant AI</h1>
+  <p>Each column is a firm's compute site — height &amp; colour = disclosed power (MW).
+     Dots are sites with no public MW figure.</p>
+</div>
+<div id="legend" class="panel">
+  <div style="font-weight:600; font-size:12px;">Disclosed power (MW)</div>
+  <div class="bar"></div>
+  <div class="row"><span id="mwmin">0</span><span id="mwmax">MW</span></div>
+  <div class="note"><span class="dot"></span>site with no public MW figure (undisclosed)</div>
+</div>
+<script>
+const DATA = {"columns": [{"lon": 120.1551, "lat": 30.2741, "firm": "High-Flyer Quant (幻方量化)", "site": "High-Flyer Fire-Flyer 2 (萤火二号) AI cluster — undisclosed location, symbolic pin at Hangzhou HQ", "city": "Hangzhou", "status": "active", "mw": 3.0, "gpu": 10000}, {"lon": -22.5758, "lat": 63.9778, "firm": "XTX Markets (tenant)", "site": "Verne Global Keflavik campus (XTX Markets + HPC tenants)", "city": "Keflavik", "status": "active", "mw": 140.0, "gpu": null}, {"lon": 27.68174, "lat": 64.22312, "firm": "XTX Markets", "site": "XTX Markets Kajaani campus", "city": "Kajaani", "status": "under_construction", "mw": 22.5, "gpu": 25000}], "points": [{"lon": -80.19243, "lat": 25.766, "firm": "Citadel Securities", "site": "Citadel Securities on Google Cloud", "city": "Miami FL", "status": "active", "mw": null, "gpu": null}, {"lon": -0.1301, "lat": 51.5162, "firm": "G-Research", "site": "G-Research ML compute (cluster locations undisclosed; London research lab)", "city": "London", "status": "active", "mw": null, "gpu": null}, {"lon": 120.1551, "lat": 30.2741, "firm": "High-Flyer Quant (幻方量化)", "site": "High-Flyer Fire-Flyer 2 (萤火二号) AI cluster — undisclosed location, symbolic pin at Hangzhou HQ", "city": "Hangzhou", "status": "active", "mw": 3.0, "gpu": 10000}, {"lon": 5.5062, "lat": 61.932, "firm": "Hudson River Trading", "site": "Hudson River Trading AI research data center — Lefdal Mine Datacenter (Norway)", "city": "Lefdal, Stad municipality (near Måløy)", "status": "active", "mw": null, "gpu": null}, {"lon": -74.006, "lat": 40.7128, "firm": "Hudson River Trading", "site": "Hudson River Trading cloud research compute — Google Cloud + Lambda (symbolic pin, New York)", "city": "New York", "status": "active", "mw": null, "gpu": null}, {"lon": -96.797, "lat": 32.7767, "firm": "Jane Street", "site": "Jane Street AI training data center (Dallas, TX — city-level)", "city": "Dallas", "status": "active", "mw": null, "gpu": 4032}, {"lon": -74.0154, "lat": 40.7147, "firm": "Jane Street", "site": "Jane Street on CoreWeave AI cloud (symbolic pin, NYC HQ)", "city": "New York", "status": "active", "mw": null, "gpu": null}, {"lon": -87.644, "lat": 41.8965, "firm": "Jump Trading", "site": "Jump Trading AI research cluster (Vera Rubin NVL72 — symbolic pin, Chicago HQ)", "city": "Chicago", "status": "active", "mw": null, "gpu": null}, {"lon": -96.89, "lat": 32.9756, "firm": "Jump Trading", "site": "Jump Trading HPC data center (Carrollton, TX — city-level, from job listings)", "city": "Carrollton", "status": "active", "mw": null, "gpu": null}, {"lon": 121.4737, "lat": 31.2304, "firm": "Minghong Investment (明汯投资)", "site": "Minghong Investment HPC cluster (明汯投资) — symbolic pin at Shanghai HQ", "city": "Shanghai (HQ city; cluster location undisclosed)", "status": "active", "mw": null, "gpu": 1500}, {"lon": -73.1106, "lat": 40.93068, "firm": "Renaissance Technologies", "site": "Renaissance Technologies East Setauket campus", "city": "East Setauket NY", "status": "active", "mw": null, "gpu": null}, {"lon": -74.0048, "lat": 40.7247, "firm": "Two Sigma", "site": "Two Sigma private datacenters + Google Cloud (symbolic pin, New York HQ)", "city": "New York", "status": "active", "mw": null, "gpu": null}, {"lon": 116.4074, "lat": 39.9042, "firm": "Ubiquant (九坤投资)", "site": "Ubiquant 'Bei Ming' AI supercomputing cluster (北溟超算集群) — symbolic pin at Beijing HQ", "city": "Beijing (HQ city; cluster location undisclosed)", "status": "active", "mw": null, "gpu": null}, {"lon": -22.5758, "lat": 63.9778, "firm": "XTX Markets (tenant)", "site": "Verne Global Keflavik campus (XTX Markets + HPC tenants)", "city": "Keflavik", "status": "active", "mw": 140.0, "gpu": null}, {"lon": 113.11, "lat": 41.02, "firm": "DeepSeek (High-Flyer lineage)", "site": "DeepSeek Ulanqab data centre (Inner Mongolia, signalled by job postings)", "city": "Ulanqab", "status": "under_construction", "mw": null, "gpu": null}, {"lon": 27.68174, "lat": 64.22312, "firm": "XTX Markets", "site": "XTX Markets Kajaani campus", "city": "Kajaani", "status": "under_construction", "mw": 22.5, "gpu": 25000}, {"lon": 27.68174, "lat": 64.22312, "firm": "XTX Markets", "site": "XTX Markets Kajaani — Building 2 (second data center, Sokajärventie)", "city": "Kajaani", "status": "under_construction", "mw": null, "gpu": null}]};
+const {MapboxOverlay, ColumnLayer, ScatterplotLayer} = deck;
+
+const mws = DATA.columns.map(d => d.mw);
+const MAXMW = Math.max(80, ...mws);
+document.getElementById('mwmax').textContent = Math.round(MAXMW) + ' MW';
+
+// orange -> red ramp on sqrt(MW) so small sites stay distinguishable
+function mwColor(mw) {
+  const t = Math.sqrt(mw) / Math.sqrt(MAXMW);
+  const stops = [[250,199,117],[239,127,42],[178,24,43]];
+  const seg = t <= 0.5 ? 0 : 1, f = t <= 0.5 ? t/0.5 : (t-0.5)/0.5;
+  const a = stops[seg], b = stops[seg+1];
+  return [0,1,2].map(i => Math.round(a[i] + (b[i]-a[i])*f)).concat(255);
+}
+const STATUS = {operational:[90,170,160], under_construction:[232,163,61],
+  planned:[130,138,153], historical:[110,110,120]};
+
+function layers() {
+  return [
+    new ScatterplotLayer({
+      id: 'sites', data: DATA.points, radiusUnits: 'pixels',
+      getPosition: d => [d.lon, d.lat], getRadius: 6, radiusMinPixels: 4,
+      getFillColor: d => (STATUS[d.status] || [130,138,153]).concat(220),
+      stroked: true, lineWidthMinPixels: 1, getLineColor: [255,255,255,120],
+      pickable: true,
+    }),
+    new ColumnLayer({
+      id: 'mw', data: DATA.columns, diskResolution: 24, radius: 30000,
+      extruded: true, radiusUnits: 'meters', elevationScale: 560000 / MAXMW,
+      getPosition: d => [d.lon, d.lat], getElevation: d => d.mw,
+      getFillColor: d => mwColor(d.mw), pickable: true,
+      material: {ambient: 0.64, diffuse: 0.6, shininess: 28, specularColor: [60,60,60]},
+    }),
+  ];
+}
+
+const map = new maplibregl.Map({
+  container: 'map', style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+  center: [2, 34], zoom: 1.15, pitch: 42, bearing: 0, antialias: true,
+  maxPitch: 70,
+});
+map.addControl(new maplibregl.NavigationControl({visualizePitch: true}), 'top-right');
+map.on('load', () => {
+  map.addControl(new MapboxOverlay({
+    interleaved: true, layers: layers(),
+    getTooltip: ({object}) => object && {html:
+      `<b>${object.firm}</b><br>${object.site}<br>${object.city} · ${object.status}`
+      + `<br>MW: ${object.mw ?? '—'}  ·  GPUs: ${object.gpu ? object.gpu.toLocaleString() : '—'}`},
+  }));
+});
+</script>
+</body>
+</html>
