@@ -1,0 +1,1276 @@
+{
+  "summary": "Fill numeric gaps (GPUs, MW, energy, status) for the HFT/HF compute-sites sheet",
+  "agentCount": 16,
+  "logs": [
+    "Facts verified: 80 across 8 firms"
+  ],
+  "result": {
+    "results": [
+      {
+        "firm_key": "xtx",
+        "verdict": "promote",
+        "final_facts": [
+          {
+            "applies_to": "T3-001",
+            "fact_type": "power_mw",
+            "value": "22.5 MW IT capacity across three data halls; 15,000 sqm building",
+            "url": "https://files.xtxmarkets.com/publications/kajaani/index.html",
+            "publisher": "XTX Markets",
+            "quote": "The centre is comprised of three data halls totalling 22.5MW of IT power",
+            "confidence": "confirmed",
+            "as_of": "2025-01-22"
+          },
+          {
+            "applies_to": "T3-001",
+            "fact_type": "status",
+            "value": "first phase expected to begin operations during 2026; 9 XTX staff on site, 300+ construction workers; hiring 5 engineers and 1 security manager",
+            "url": "https://yle.fi/a/74-20184002",
+            "publisher": "Yle",
+            "quote": "Datakeskuksen ensimmäinen vaihe aloittaa toiminnan vuonna 2026",
+            "confidence": "reported",
+            "as_of": "2025-09-23"
+          },
+          {
+            "applies_to": "T3-001",
+            "fact_type": "status",
+            "value": "contractor project page still lists building 1 as under construction, completion targeted H1 2026 (page state as fetched 2026-07-05)",
+            "url": "https://www.yit.fi/en/projects/xtx-markets-data-center-in-kajaani",
+            "publisher": "YIT",
+            "quote": "The project is scheduled for completion in the first half of 2026.",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "T3-001",
+            "fact_type": "status",
+            "value": "still described as completing 'in 2026' (future tense) as of 2026-03-18; construction proceeding to plan per YIT",
+            "url": "https://yle.fi/a/74-20215962",
+            "publisher": "Yle",
+            "quote": "Ensimmäinen datakeskus valmistuu vuonna 2026. YIT:n mukaan rakentaminen sujuu suunnitelmien mukaisesti.",
+            "confidence": "reported",
+            "as_of": "2026-03-18"
+          },
+          {
+            "applies_to": "T3-017",
+            "fact_type": "status",
+            "value": "in interior-finishing / building-services / commissioning phase since March 2026 (structure and envelope complete; construction began Aug 2025); completion expected 2027",
+            "url": "https://www.yitgroup.com/en/news-repository/investor-news/yit-and-xtx-markets-agree-on-interior-finishing-and-building-services-contract-for-the-second-data-center-building-in-kajaani",
+            "publisher": "YIT Corporation (investor news)",
+            "quote": "Work is already underway, and the facility is expected to be completed in 2027.",
+            "confidence": "confirmed",
+            "as_of": "2026-03-18"
+          },
+          {
+            "applies_to": "Kajaani building 3",
+            "fact_type": "status",
+            "value": "shell-and-core contract signed with YIT as main contractor; construction to begin summer 2026",
+            "url": "https://www.datacenterdynamics.com/en/news/xtx-markets-taps-yit-to-build-third-finnish-data-center/",
+            "publisher": "Data Center Dynamics",
+            "quote": "YIT Corporation this week announced it has signed an agreement to construct the shell and core of XTX's third data center in Kajaani.",
+            "confidence": "reported",
+            "as_of": "2026-06-18"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "over 25,000 GPUs, 650 PB usable storage (research cluster)",
+            "url": "https://files.xtxmarkets.com/publications/kajaani/index.html",
+            "publisher": "XTX Markets",
+            "quote": "a growing research cluster currently containing over 25,000 GPUs with 650 petabytes of usable storage",
+            "confidence": "confirmed",
+            "as_of": "2025-01-22"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "still 'over 25,000 GPUs' on XTX's own site as of 2026-07-05; storage figure updated to over 1 Exabyte",
+            "url": "https://www.xtxmarkets.com/",
+            "publisher": "XTX Markets",
+            "quote": "over 25,000 GPUs in our research cluster",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "Kajaani campus",
+            "fact_type": "power_mw",
+            "value": "250 MW planned campus total (full build)",
+            "url": "https://yle.fi/a/74-20156607",
+            "publisher": "Yle",
+            "quote": "Yhtiö suunnittelee rakentavansa Kajaaniin datakeskuksia yhteensä 250 megawatin edestä.",
+            "confidence": "reported",
+            "as_of": "2025-04-16"
+          },
+          {
+            "applies_to": "Kajaani campus",
+            "fact_type": "power_mw",
+            "value": "250 MW facility (earliest press appearance of the figure)",
+            "url": "https://www.datacenterdynamics.com/en/news/financial-trading-firm-xtx-to-open-data-center-in-finland/",
+            "publisher": "Data Center Dynamics",
+            "quote": "The company is constructing a 250MW facility in Kajaani",
+            "confidence": "reported",
+            "as_of": "2024-04-12"
+          },
+          {
+            "applies_to": "Kajaani campus",
+            "fact_type": "power_mw",
+            "value": "~250 MW at full build-out (DCD itself hedges with 'reportedly'); five data centers planned on 478-acre site, €1bn+ investment",
+            "url": "https://www.datacenterdynamics.com/en/news/xtx-markets-to-build-data-center-campus-in-kajaani-finland/",
+            "publisher": "Data Center Dynamics",
+            "quote": "could reportedly total 250MW at full build-out",
+            "confidence": "reported",
+            "as_of": "2025-01-22"
+          },
+          {
+            "applies_to": "T3-001",
+            "fact_type": "power_mw",
+            "value": "22.5 MW electrical power required by first phase (grid-demand framing)",
+            "url": "https://yle.fi/a/74-20156607",
+            "publisher": "Yle",
+            "quote": "XTX rakentaa parhaillaan Kajaaniin datakeskusta, jonka ensimmäinen vaihe vaatii 22,5 megawatin sähkötehon.",
+            "confidence": "reported",
+            "as_of": "2025-04-16"
+          },
+          {
+            "applies_to": "Kajaani campus",
+            "fact_type": "other",
+            "value": "EIA programme (dated 2026-04-29) for a ~30 km 400 kV line connecting the campus to Fingrid grid at Höyttikangas (planned) or Vuolijoki (existing) substation; line construction estimated 2027-2029; responsible party XTX Markets / XTX Finland Oy, consultant Sitema Oy",
+            "url": "https://www.ymparisto.fi/sites/default/files/documents/Arviointiohjelma_suksisuo_vuottolahti_400kv_voimajohtohanke_0.pdf",
+            "publisher": "ymparisto.fi (Finnish environmental administration; filing by XTX Markets / XTX Finland Oy via Sitema Oy)",
+            "quote": "Hankkeen tavoitteena on yhdistää XTX Kajaanin datakeskus kantaverkkoon Fingridin tulevalle Höyttikankaan tai olemassa olevalle Vuolijoen sähköasemalle.",
+            "confidence": "confirmed",
+            "as_of": "2026-04-29"
+          },
+          {
+            "applies_to": "Kajaani campus",
+            "fact_type": "other",
+            "value": "future phases under review due to proposed Finnish electricity tax changes (COO Mike Irwin)",
+            "url": "https://www.datacenterdynamics.com/en/news/algorithmic-trader-xtx-markets-plans-second-finnish-data-center-but-says-electricity-tax-could-impact-future-phases/",
+            "publisher": "Data Center Dynamics",
+            "quote": "our longer-term investment roadmap remains under review due to the proposed changes in electricity taxation",
+            "confidence": "reported",
+            "as_of": "2025-08-12"
+          },
+          {
+            "applies_to": "T3-002",
+            "fact_type": "status",
+            "value": "research compute currently runs from a supercomputer in Iceland; operator and Iceland-specific scale not published",
+            "url": "https://a-teaminsight.com/blog/xtx-markets-commits-e1-billion-to-finnish-data-centre-complex/",
+            "publisher": "A-Team Insight",
+            "quote": "XTX currently operates its computational research from a supercomputer in Iceland and relies on over 25,000 GPUs with 650 petabytes of storage.",
+            "confidence": "reported",
+            "as_of": "2025-01-28"
+          }
+        ],
+        "final_nulls": [
+          "No public confirmation that Kajaani building 1 (T3-001) is energized/operational as of 2026-07-05. Latest checkpoints: Yle (2026-03-18) still says it 'will be completed in 2026' (future tense); YIT's project page (fetched 2026-07-05) still shows 'Project status: Under construction' with H1 2026 target; DCD (2026-06-18) does not state it is live; fresh web search finds no commissioning/opening announcement. Absence of a commissioning announcement is the finding.",
+          "No firmwide GPU figure newer than 'over 25,000' (first published Jan 2025). XTX's website still says 'over 25,000 GPUs' as of 2026-07-05; only the storage figure has been updated (650 PB in Jan 2025 release vs 'over 1 Exabyte' on current site). DCD's June 2026 article likewise still cites 'more than 25,000 GPUs', sourced from job posts.",
+          "The ~250MW campus full-build figure appears ONLY in press (DCD Apr 2024; DCD Jan 2025 with 'reportedly'; Yle Apr 2025). Verified absent from XTX's own Kajaani announcement (refetched 2026-07-05: no figure beyond 22.5MW) and from XTX's 96-page 400 kV EIA programme of Apr 2026 (full-text search of the downloaded PDF finds no MW figure at all).",
+          "No public annual energy consumption figure (GWh/MWh) exists for the Kajaani campus or firmwide — only IT-power (22.5MW first building) and planned-capacity (~250MW, press-only) figures.",
+          "No verifiable public source names Verne Global as the operator hosting XTX's Iceland cluster (T3-002): A-Team Insight (fetched) says only 'a supercomputer in Iceland' and names no operator. No Iceland-specific MW or GPU scale has been published; any Verne Keflavik tenancy attribution should remain 'inferred' at best.",
+          "The primary YIT Oyj press release for building 3 (news.cision.com c4363863) returned HTTP 403 again on 2026-07-05, and yitgroup.com's news repository does not mirror it (only the Aug 2025 second-building release is there); DCD's 2026-06-18 write-up therefore remains the best fetchable source and the building-3 fact stays graded 'reported'."
+        ],
+        "reasoning": "Adversarial re-verification on 2026-07-05: every URL was fetched (the ymparisto.fi EIA PDF exceeded WebFetch's size cap, so it was downloaded in full — 96 pages, 15MB — and its text extracted and searched directly). All 15 facts survived: every quote was found verbatim in the cited source and values match. Confidence grades were re-checked strictly and stand: XTX's own publication/site = confirmed; YIT contractor/investor pages = confirmed; regulator-hosted EIA filing by the firm = confirmed; Yle/DCD/A-Team = reported. The one date ambiguity (Yle 74-20215962 showing '18.3.' without a year) resolves to 2026-03-18: Yle omits the year only on current-year articles, the article ID postdates the Sept 2025 piece, and its content (second building interior work underway, 2027 completion) matches YIT's investor news of exactly 2026-03-18. Nulls were adversarially tested: fresh searches found no building-1 commissioning announcement (YIT page still 'Under construction' today); XTX's own Kajaani page was re-queried specifically for 250MW and contains none; grep over the full EIA text confirms zero MW figures; the cision primary release for building 3 403'd again and is not mirrored on yitgroup.com, so building 3 correctly stays 'reported' via DCD. No facts dropped, no upgrades or downgrades warranted; nulls all remain true and two were strengthened with fetch-verified detail."
+      },
+      {
+        "firm_key": "jane-street",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "T3-009",
+            "fact_type": "gpu_count",
+            "value": "4,032 liquid-cooled GPUs",
+            "url": "https://www.janestreet.com/join-jane-street/machine-learning/",
+            "publisher": "Jane Street (own careers/ML page)",
+            "quote": "come tour our new Texas datacenter: 4,032 GPUs, liquid cooled",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "T3-009",
+            "fact_type": "status",
+            "value": "operational; located in Dallas, Texas",
+            "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-jane-street-plans-data-center-report/",
+            "publisher": "Data Center Dynamics",
+            "quote": "Jane Street currently operates from a data center in Dallas, Texas",
+            "confidence": "reported",
+            "as_of": "2026-06-05"
+          },
+          {
+            "applies_to": "T3-009",
+            "fact_type": "racks",
+            "value": "56 racks",
+            "url": "https://www.ababnews.com/news/4310d1fc-4e52-4855-9a67-9b4b84e5c18d",
+            "publisher": "ABAB News (low-tier aggregator relaying Jane Street's own May 2026 video tour with Dwarkesh Patel)",
+            "quote": "The data center is equipped with 4,032 GPUs (distributed across 56 racks)",
+            "confidence": "reported",
+            "as_of": "2026-05-19"
+          },
+          {
+            "applies_to": "T3-009",
+            "fact_type": "power_mw",
+            "value": "up to 140 kW per rack (56 racks); no facility-total MW disclosed",
+            "url": "https://www.ababnews.com/news/4310d1fc-4e52-4855-9a67-9b4b84e5c18d",
+            "publisher": "ABAB News (low-tier aggregator relaying Jane Street's own May 2026 video tour with Dwarkesh Patel)",
+            "quote": "has a single rack power capacity of up to 140 kW",
+            "confidence": "reported",
+            "as_of": "2026-05-19"
+          },
+          {
+            "applies_to": "T3-009",
+            "fact_type": "other",
+            "value": "8,000 km of internal fiber-optic cabling",
+            "url": "https://www.ababnews.com/news/4310d1fc-4e52-4855-9a67-9b4b84e5c18d",
+            "publisher": "ABAB News (low-tier aggregator relaying Jane Street's own May 2026 video tour with Dwarkesh Patel)",
+            "quote": "internal wiring consisting of 8,000 kilometers of fiber optic cables",
+            "confidence": "reported",
+            "as_of": "2026-05-19"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "tens of thousands of high-end GPUs (no exact figure published)",
+            "url": "https://www.janestreet.com/join-jane-street/machine-learning/",
+            "publisher": "Jane Street (own careers/ML page)",
+            "quote": "Tens of Thousands of high-end GPUs",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "planned scale-up to hundreds of thousands of GPUs (~10x compute)",
+            "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-jane-street-plans-data-center-report/",
+            "publisher": "Data Center Dynamics (citing Bloomberg)",
+            "quote": "already has tens of thousands of GPUs running, soon to increase into the hundreds of thousands.",
+            "confidence": "reported",
+            "as_of": "2026-06-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "1+ exabyte of storage",
+            "url": "https://www.janestreet.com/join-jane-street/machine-learning/",
+            "publisher": "Jane Street (own careers/ML page)",
+            "quote": "1 exabytes+ current storage",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "planned self-built DC (site TBD)",
+            "fact_type": "power_mw",
+            "value": "100-200 MW sought; firm looking to build and finance its own facility; early-stage, location and final capacity undecided",
+            "url": "https://www.datacenterdynamics.com/en/news/quant-trading-firm-jane-street-plans-data-center-report/",
+            "publisher": "Data Center Dynamics (citing Bloomberg)",
+            "quote": "It is seeking 100-200MW in capacity for the data center.",
+            "confidence": "reported",
+            "as_of": "2026-06-05"
+          },
+          {
+            "applies_to": "T3-010",
+            "fact_type": "investment",
+            "value": "~$6bn cloud-services commitment (announced 2026-04-15)",
+            "url": "https://www.coreweave.com/news/jane-street-signs-6-billion-ai-cloud-agreement-with-coreweave",
+            "publisher": "CoreWeave (own press release)",
+            "quote": "Jane Street has committed approximately $6 billion to use CoreWeave's AI cloud platform.",
+            "confidence": "confirmed",
+            "as_of": "2026-04-15"
+          },
+          {
+            "applies_to": "T3-010",
+            "fact_type": "gpu_type",
+            "value": "NVIDIA Vera Rubin, delivered across multiple CoreWeave facilities (none named)",
+            "url": "https://www.coreweave.com/news/jane-street-signs-6-billion-ai-cloud-agreement-with-coreweave",
+            "publisher": "CoreWeave (own press release)",
+            "quote": "access to next-generation compute across multiple facilities, including NVIDIA's Vera Rubin technology",
+            "confidence": "confirmed",
+            "as_of": "2026-04-15"
+          },
+          {
+            "applies_to": "T3-010",
+            "fact_type": "investment",
+            "value": "$1bn equity investment in CoreWeave Class A stock at $109.00/share",
+            "url": "https://www.coreweave.com/news/jane-street-signs-6-billion-ai-cloud-agreement-with-coreweave",
+            "publisher": "CoreWeave (own press release)",
+            "quote": "equity investment of $1 billion in CoreWeave Class A common stock at a purchase price of $109.00 per share",
+            "confidence": "confirmed",
+            "as_of": "2026-04-15"
+          }
+        ],
+        "final_nulls": [
+          "No public facility-total power (MW) figure exists for the existing Dallas/Texas AI training DC (T3-009). Only a per-rack 'up to 140 kW' figure circulates (from the firm's May 2026 video tour); 56 racks x 140 kW ~= 7.8 MW IT load would be arithmetic inference, not public record.",
+          "No concrete firmwide GPU fleet number exists beyond 'tens of thousands' (Jane Street's own careers/ML page) and the reported ambition of 'hundreds of thousands' / ~10x compute (Bloomberg via DCD). No exact fleet count is published anywhere.",
+          "No GPU count, MW capacity, or contract duration has been disclosed for the $6bn CoreWeave agreement (T3-010). CoreWeave's own press release names only 'NVIDIA's Vera Rubin technology' and delivery 'across multiple facilities', with no facilities identified.",
+          "The exact street address and ownership model (owned vs leased colocation) of the Dallas facility are not in the public record. Jane Street's own page says only 'Texas datacenter'; DCD says only 'Dallas, Texas'.",
+          "The planned 100-200 MW self-financed facility has no public location, final capacity, or timeline. DCD (citing Bloomberg, verified 2026-07-05): 'the conversations remain in the early stages' and 'Jane Street declined to comment to the publication.'"
+        ],
+        "reasoning": "Adversarial verification completed 2026-07-05. All four cited URLs were fetched live and every quoted claim was located in the fetched content, so no facts were dropped. Specific checks: (1) janestreet.com/join-jane-street/machine-learning contains 'Today, come tour our new Texas datacenter: 4,032 GPUs, liquid cooled', 'Tens of Thousands of high-end GPUs', and '1 exabytes+ current storage' — confirmed grade upheld (firm's own material); quote for the 4,032 fact strengthened to include the 'Texas datacenter' context. (2) The DCD article (dated 2026-06-05) contains the Dallas sentence, the tens-of-thousands-to-hundreds-of-thousands sentence, and the 100-200MW sentence verbatim; a targeted re-fetch confirmed the previously weak 'self-financed' element via the subtitle 'Company is looking to build and finance its own data center' and confirmed 'Jane Street declined to comment' — reported grade upheld; as_of normalized to the verified DCD article date (2026-06-05) since the Bloomberg original was not independently fetched. (3) The ABAB News piece supports 56 racks, 140 kW/rack, and 8,000 km fiber verbatim and explicitly ties them to the Dwarkesh Patel video tour of the Jane Street facility; article date corrected to 2026-05-19 (researcher had 2026-05-21). Kept at reported with the aggregator caveat preserved in the publisher field; these should only be upgraded to confirmed after direct timestamped verification against the video itself, which could not be fetched. (4) CoreWeave's own press release (2026-04-15) contains all three quotes verbatim — confirmed grade upheld (operator's primary material); the unfetchable SEC 8-K is unnecessary given the primary press release. Nulls: all five survive; the CoreWeave null was trimmed to remove an unverified clause attributing a 'no timeline' observation to DCD and the 8-K reference, restating it strictly on the verified press-release content. Changes are corrective (dates, one quote, one value clarification, null trimming), hence promote_with_changes."
+      },
+      {
+        "firm_key": "hrt",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "T3-011",
+            "fact_type": "other",
+            "value": ">125 kW per rack, direct-liquid-cooled NVIDIA Blackwell GPU racks",
+            "url": "https://www.facebook.com/hudsonrivertrading/posts/to-reach-the-servers-at-lefdal-mine-data-centers-you-have-to-tunnel-into-a-norwe/1606192637895717/",
+            "publisher": "Hudson River Trading (official Facebook)",
+            "quote": "direct-liquid-cooled racks of NVIDIA Blackwell GPUs operating above 125 kW per cabinet",
+            "confidence": "confirmed",
+            "as_of": "2026"
+          },
+          {
+            "applies_to": "T3-011",
+            "fact_type": "gpu_type",
+            "value": "Dell PowerEdge XE9685L (AMD EPYC) with NVIDIA HGX B200, in Dell IRSS DLC racks with NVIDIA Spectrum-X Ethernet",
+            "url": "https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~05~hudson-river-trading-expands-dell-deployment-to-power-ai-driven-research.htm",
+            "publisher": "Dell Technologies (press release)",
+            "quote": "direct liquid-cooled Dell PowerEdge XE9685L servers with AMD EPYC processors, NVIDIA HGX B200 systems",
+            "confidence": "confirmed",
+            "as_of": "2026-05-14"
+          },
+          {
+            "applies_to": "T3-011",
+            "fact_type": "status",
+            "value": "operational — described as 'recently opened' in Dell PR of 2026-05-14",
+            "url": "https://www.dell.com/en-us/dt/corporate/newsroom/announcements/detailpage.press-releases~usa~2026~05~hudson-river-trading-expands-dell-deployment-to-power-ai-driven-research.htm",
+            "publisher": "Dell Technologies (press release)",
+            "quote": "HRT recently opened a data center at Lefdal Mine Data Centers",
+            "confidence": "confirmed",
+            "as_of": "2026-05-14"
+          },
+          {
+            "applies_to": "T3-011",
+            "fact_type": "energy",
+            "value": "100% renewable power; fjord seawater cooling",
+            "url": "https://www.linkedin.com/posts/hudson-river-trading_hpc-at-hrt-scaling-through-the-fjord-activity-7438251239609516032-ZIEs",
+            "publisher": "Hudson River Trading (official LinkedIn)",
+            "quote": "cold seawater from a nearby fjord cools dense GPU clusters designed for large-scale AI workloads",
+            "confidence": "confirmed",
+            "as_of": "2026"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "status",
+            "value": "Google Cloud HPC/GPU research capacity partnership since 2024-07; no capacity or spend figures disclosed",
+            "url": "https://www.googlecloudpresscorner.com/2024-07-18-Google-Cloud-Enables-Hudson-River-Tradings-Automated-Trading-Evolution-with-High-Performance-Compute-and-AI-Infrastructure",
+            "publisher": "Google Cloud (press release)",
+            "quote": "Google Cloud is providing HRT with access to its high-performance computing infrastructure, including powerful AI chips such as NVIDIA GPUs",
+            "confidence": "confirmed",
+            "as_of": "2024-07-18"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "status",
+            "value": "Lambda supplies NVIDIA HGX B200 capacity, announced 2026-05-20; quantities undisclosed",
+            "url": "https://lambda.ai/blog/lambda-partners-with-hudson-river-trading-to-power-quantitative-research-and-development",
+            "publisher": "Lambda (company blog)",
+            "quote": "NVIDIA accelerated computing infrastructure, including NVIDIA HGX B200 systems, advanced networking, storage, and orchestration",
+            "confidence": "confirmed",
+            "as_of": "2026-05-20"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "status",
+            "value": "Lambda–HRT deal corroborated by trade press; no GPU counts or contract value reported",
+            "url": "https://www.datacenterdynamics.com/en/news/hudson-river-trading-selects-lambda-for-ai-compute-infrastructure/",
+            "publisher": "Data Center Dynamics",
+            "quote": "Lambda will provide HRT with access to Nvidia HGX B200 systems, along with advanced networking, storage, and orchestration",
+            "confidence": "reported",
+            "as_of": "2026-05-22"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "hundreds of petabytes of research data storage (Blobby distributed filesystem)",
+            "url": "https://www.hudsonrivertrading.com/hrtbeat/distributed-filesystem-for-scalable-research/",
+            "publisher": "Hudson River Trading (HRT Beat engineering blog)",
+            "quote": "storing hundreds of petabytes of data",
+            "confidence": "confirmed",
+            "as_of": "2025-08-19"
+          }
+        ],
+        "final_nulls": [
+          "T3-011 Lefdal: no public MW figure for HRT's deployment — absent from Dell PR (2026-05-14), HRT's own Facebook/LinkedIn posts, Lefdal's website, and press coverage; re-verified 2026-07-05 (fresh search returns only Lefdal campus-level figures: 80MW current, up to 200MW potential — operator figures, not HRT's).",
+          "T3-011 Lefdal: no public rack count for HRT's deployment; only the per-rack density (>125 kW/cabinet) is public.",
+          "T3-011 Lefdal: no public GPU count — hardware type (Dell XE9685L, NVIDIA HGX B200/Blackwell) is public, quantities are not (Dell PR explicitly gives no GPU/rack/MW metrics; verified by fetch 2026-07-05).",
+          "Lambda partnership (2026): no GPU count, HGX B200 unit quantity, MW, or contract value disclosed — Lambda blog and DCD article both fetched 2026-07-05 contain no quantities (DCD's $1bn credit facility mention is Lambda corporate finance, not the HRT deal).",
+          "Google Cloud partnership (2024): no capacity, GPU-count, or spend figures in Google Cloud's press release (fetched 2026-07-05); only qualitative access to HPC infrastructure and products like Dynamic Workload Scheduler.",
+          "HRT engineering blog (HRT Beat): no firmwide GPU-count, cluster-size, or MW figures published; the only hard figure is 'hundreds of petabytes' of storage. Job-ad claims ('GPU clusters larger than most national labs') appear only in stale search snippets, not on live pages, so they are excluded.",
+          "Lefdal Mine's own website does not name HRT as a customer (re-checked lefdalmine.com 2026-07-05; only BNP Paribas is named, with no MW/rack specifics for any customer)."
+        ],
+        "reasoning": "Adversarial re-verification, 2026-07-05. All 7 cited URLs were fetched live and each supports its fact: (1) HRT's official Facebook post carries the exact '>125 kW per cabinet' Blackwell DLC quote; (2-3) Dell's 2026-05-14 PR confirms XE9685L/AMD EPYC/HGX B200/IRSS/Spectrum-X and 'HRT recently opened a data center at Lefdal Mine Data Centers', with no MW/GPU/rack figures; (4) HRT's LinkedIn post confirms fjord seawater cooling and 'powered entirely by renewable energy'; (5) Google Cloud's 2024-07-18 PR confirms HPC/NVIDIA GPU access with no quantities; (6) Lambda's 2026-05-20 blog confirms HGX B200 supply with no quantities; (7) DCD 2026-05-22 corroborates the Lambda deal (reported grade correct); (8) HRT Beat (2025-08-19) confirms 'hundreds of petabytes'. Confidence grades were re-checked and are correctly assigned (firm/vendor/contractor materials = confirmed; DCD = reported). One change forced the promote_with_changes verdict: the energy fact's quote originally read 'cold seawater siphoned from a nearby fjord...' but the fetched post text reads 'cold seawater from a nearby fjord cools dense GPU clusters designed for large-scale AI workloads' — quote corrected to verified wording; I also normalized the Dell status quote to the fetched 'HRT recently opened...' phrasing. Nulls were independently stress-tested: a fresh MW-focused search surfaced only Lefdal campus-level operator figures (80MW current, 200MW potential — the researcher's misattribution warning about 3i/Lefdal figures is validated), and lefdalmine.com names only BNP Paribas, not HRT. All 7 nulls survive. The researcher's exclusions (unfetchable X post, NVIDIA cookie-walled case study, unverified Bloomberg revenue figure) were correct calls and remain excluded."
+      },
+      {
+        "firm_key": "jump",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "T3-015",
+            "fact_type": "status",
+            "value": "Vera Rubin NVL72 deployment publicly announced 2026-03-17; no rack or GPU count disclosed",
+            "url": "https://www.linkedin.com/posts/jump-trading_today-jump-trading-became-one-of-the-first-activity-7439690776311365632-YnM9",
+            "publisher": "Jump Trading (LinkedIn)",
+            "quote": "one of the first financial services firms to deploy NVIDIA's Vera Rubin NVL72 system",
+            "confidence": "confirmed",
+            "as_of": "2026-03-17"
+          },
+          {
+            "applies_to": "T3-015",
+            "fact_type": "gpu_type",
+            "value": "NVIDIA Vera Rubin NVL72 (Rubin platform)",
+            "url": "https://blogs.nvidia.com/blog/gtc-2026-news/#jump-trading",
+            "publisher": "NVIDIA (GTC 2026 news blog)",
+            "quote": "Jump Trading will be among the first trading firms in financial services to adopt the NVIDIA Rubin platform",
+            "confidence": "confirmed",
+            "as_of": "2026-03-17"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "thousands of GPUs (order of magnitude only, no exact figure)",
+            "url": "https://www.jumptrading.com/ai-ml",
+            "publisher": "Jump Trading (corporate site)",
+            "quote": "Massive HPC grid with thousands of GPUs and blisteringly fast I/O",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "10,000+ compute nodes; 5M+ simulations run daily",
+            "url": "https://www.jumptrading.com/ai-ml",
+            "publisher": "Jump Trading (corporate site)",
+            "quote": "10,000+ Compute Nodes 5M+ Simulations Run Daily",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "3 large purpose-built research data centers + 100+ colocated compute environments near exchanges",
+            "url": "https://www.jumptrading.com/technology",
+            "publisher": "Jump Trading (corporate site)",
+            "quote": "Three large, purpose-built research data centers and over 100 co-located compute environments near global exchanges",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "T3-016",
+            "fact_type": "status",
+            "value": "active Jump HPC data center site in Carrollton TX (live job posting), high-density liquid-cooled",
+            "url": "https://boards-api.greenhouse.io/v1/boards/jumptrading/jobs/7781600",
+            "publisher": "Jump Trading (Greenhouse job board API)",
+            "quote": "the latest in server, network and storage technology such as high-density cabinets and liquid cooling",
+            "confidence": "inferred",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "VAST storage cluster throughput 1.25 TB/s at ~0.6 ms latency; infrastructure supports thousands of CPUs and GPUs",
+            "url": "https://www.vastdata.com/blog/how-jump-trading-rebuilt-data-infrastructure-around-shared",
+            "publisher": "VAST Data (vendor case study, FWD 2026)",
+            "quote": "cluster throughput hit 1.25 TB/s at around 0.6 ms latency",
+            "confidence": "confirmed",
+            "as_of": "2026-04-20"
+          }
+        ],
+        "final_nulls": [
+          "No public figure exists for the size of Jump's Vera Rubin NVL72 deployment (number of NVL72 racks or GPUs) — NVIDIA's GTC 2026 blog item, Jump's LinkedIn announcement, and targeted searches give no counts; NVIDIA names only cloud providers (AWS, Google Cloud, Microsoft, OCI, CoreWeave) for sized first deployments.",
+          "No public location is disclosed for the Vera Rubin NVL72 cluster (T3-015).",
+          "No public capacity figures (MW, sq ft, rack count) exist for the Carrollton TX facility (T3-016); no planning/permit records or press tie Jump to a specific Carrollton address, and it is not publicly established whether the space is Jump-owned or leased colo (Carrollton hosts multiple third-party colos, e.g. CyrusOne's ~60 MW site, with no public Jump link).",
+          "No firmwide GPU count more precise than 'thousands of GPUs' (Jump's own site) exists in public; no power (MW) figure exists for any Jump research data center.",
+          "The locations of Jump's 'three large, purpose-built research data centers' are not publicly enumerated by the firm; Carrollton being one of them is inference from job ads only."
+        ],
+        "reasoning": "Fetched all 7 URLs. (1) LinkedIn post live; quote verbatim; activity ID 7439690776311365632 decodes to 2026-03-17T15:15 UTC, corroborated by NVIDIA's GTC page dating the Financial Services item 'Tuesday, March 17, 10:00 a.m. PT'. Jump's own channel = confirmed. (2) NVIDIA GTC 2026 page: WebFetch's summarizer initially reported no Jump mention, but the raw HTML (fetched via curl, HTTP 200) contains the section 'Jump Trading to Become One of the First Trading Firms to Adopt NVIDIA Rubin Platform' with the quote verbatim and the #jump-trading anchor present; however the page does NOT state the 72-GPU/36-CPU per-rack spec, so I trimmed the value to 'NVIDIA Vera Rubin NVL72 (Rubin platform)' — the only substantive change. Tense discrepancy (Jump: 'deployed'; NVIDIA: 'will be among the first to adopt') preserved by keeping the status fact conservative. (3-5) jumptrading.com/ai-ml and /technology return 403 to WebFetch but 200 with a browser UA; all three quotes ('thousands of GPUs', '10,000+ Compute Nodes 5M+ Simulations Run Daily', 'Three large, purpose-built research data centers and over 100 co-located compute environments near global exchanges') verified verbatim in page text = confirmed. (6) Greenhouse boards API job 7781600 live: 'HPC Data Center Technician', location Carrollton, TX; liquid-cooling/high-density quote verbatim; correctly graded inferred (job ad). (7) VAST Data blog live, published 2026-04-20, VAST FWD 2026 talk by Jump's own HPC Systems Engineer; '1.25 TB/s at around 0.6 ms' quote verbatim; graded confirmed as contractor/vendor documentation of Jump's deployment sourced from Jump's engineer. Refutation searches for NVL72 deployment size and Carrollton MW/address figures returned nothing Jump-specific, so all five nulls survive (null 3 enriched with the CyrusOne-colo caveat, null 1 with NVIDIA's cloud-provider-only deployment sizing). Verdict: promote_with_changes solely for the gpu_type value trim."
+      },
+      {
+        "firm_key": "g-research",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "T3-014",
+            "fact_type": "other",
+            "value": "global estate of data centres with multiple megawatts of capacity (locations undisclosed)",
+            "url": "https://web.archive.org/web/20241129110733/https://www.gresearch.com/vacancy/R2823-Data-Centre-Engineer/",
+            "publisher": "G-Research careers page (Wayback Machine capture; London/Soho Place version of the ad)",
+            "quote": "global estate of data centres with multiple megawatts of capacity",
+            "confidence": "inferred",
+            "as_of": "2024-11-29"
+          },
+          {
+            "applies_to": "T3-014",
+            "fact_type": "power_mw",
+            "value": "multiple 8 MW data halls (count and locations undisclosed)",
+            "url": "https://www.gresearch.com/news/building-modern-resilient-and-reliant-infrastructure/",
+            "publisher": "G-Research (own site; video transcript of Philip Bullock, US IaaS Lead, Dallas)",
+            "quote": "compute CPU and GPU, multiple eight megawatt data halls",
+            "confidence": "confirmed",
+            "as_of": "2024-07-15"
+          },
+          {
+            "applies_to": "G-Research Dallas infrastructure hub",
+            "fact_type": "status",
+            "value": "new 'engineering and infrastructure hub' in Dallas, hiring since ~July 2023 (office/engineering hub; not shown to be a data centre)",
+            "url": "https://web.archive.org/web/20231104015724/https://www.efinancialcareers.com/news/2023/10/g-research-dallas",
+            "publisher": "eFinancialCareers (Sarah Butcher; Wayback Machine capture)",
+            "quote": "an entirely new 'engineering and infrastructure hub' in Dallas",
+            "confidence": "reported",
+            "as_of": "2023-10-30"
+          },
+          {
+            "applies_to": "G-Research Dallas infrastructure hub",
+            "fact_type": "status",
+            "value": "Data Centre Engineer role rebased to 'our new Dallas infrastructure hub' by Feb 2025 (same ad was London/Soho Place in Nov 2024)",
+            "url": "https://web.archive.org/web/20250219221045/https://www.gresearch.com/vacancy/R2823-Data-Centre-Engineer/",
+            "publisher": "G-Research careers page (Wayback Machine capture)",
+            "quote": "This is a hybrid role based in our new Dallas infrastructure hub",
+            "confidence": "inferred",
+            "as_of": "2025-02-19"
+          },
+          {
+            "applies_to": "G-Research Dallas infrastructure hub",
+            "fact_type": "status",
+            "value": "hiring Dallas-based engineer to design and construct data center facilities end-to-end (mid-2025), implying self-build activity",
+            "url": "https://web.archive.org/web/20250625011119/https://www.gresearch.com/vacancies/senior-hpc-data-center-engineer/",
+            "publisher": "G-Research careers page (Wayback Machine capture)",
+            "quote": "skilled Data Center Design and Build Engineer to oversee the end-to-end planning, design and construction of data center facilities",
+            "confidence": "inferred",
+            "as_of": "2025-06-25"
+          },
+          {
+            "applies_to": "T3-014",
+            "fact_type": "other",
+            "value": "NorthMark Strategies (president: former G-Research COO Jen Byrne; Dallas ties) reportedly created to run data centres and compute management for G-Research",
+            "url": "https://web.archive.org/web/20251001161918/https://www.efinancialcareers.com/news/northmark-strategies-g-research-high-performance-computing?utm_source=GLOBAL_ALL_ENG&utm_medium=SM_TW&utm_campaign=ED_NEWS",
+            "publisher": "eFinancialCareers (Alex McMurray; Wayback Machine capture)",
+            "quote": "Insiders suggest that NorthMark was created in order to handle data centres and compute management for G-Research and its affiliated entities",
+            "confidence": "reported",
+            "as_of": "2025-10-01"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "Armada scheduler in production: millions of batch jobs/day across tens of thousands of nodes (CPU+GPU mix; no GPU split given)",
+            "url": "https://armadaproject.io/",
+            "publisher": "Armada Project site (CNCF Sandbox project; G-Research's open-source scheduler per the firm's own engineering blog)",
+            "quote": "uses Armada in production to: Process millions of jobs per day Manage tens of thousands of nodes",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "stated design goal (2020): run a fleet of thousands of servers across multiple Kubernetes clusters",
+            "url": "https://www.gresearch.com/news/armada-how-to-run-millions-of-batch-jobs-over-thousands-of-compute-nodes-using-kubernetes/",
+            "publisher": "G-Research engineering blog",
+            "quote": "Our aim is to run a fleet of thousands of servers.",
+            "confidence": "confirmed",
+            "as_of": "2020-12-10"
+          }
+        ],
+        "final_nulls": [
+          "No public GPU count or GPU model/type exists for G-Research's clusters — no NVIDIA/vendor case study, press figure, or conference-talk number found; the firm's own transcript says only 'a tremendous amount of compute CPU and GPU' (re-checked via web search 2026-07-05).",
+          "No public data-centre locations, operators, or addresses for the 'global estate' — job ads and the firm's own materials never name a facility or city for the 8 MW data halls (Dallas is named only as an office/infrastructure hub).",
+          "No public total power figure in MW — only the qualitative 'multiple megawatts' (job ad) and 'multiple eight megawatt data halls' with no count of halls given.",
+          "No public investment/capex figure for G-Research's compute or data-centre build-out (re-checked via web search 2026-07-05; nothing found).",
+          "No public core-count, rack-count, or storage figures; Armada materials give only 'tens of thousands of nodes' without hardware detail.",
+          "The WWT case study 'Quant Hedge Fund Builds Software-defined GPU Data Center' is anonymized ('global hedge fund') and cannot be attributed to G-Research; not usable as evidence."
+        ],
+        "reasoning": "All 8 URLs fetched and verified. WebFetch is blocked from web.archive.org, so the five Wayback captures were fetched via curl and grep-verified against the exact quoted strings: (1) Nov 2024 R2823 ad contains 'global estate of data centres with multiple megawatts of capacity' and is Soho Place/London-based; (2) Feb 2025 capture of the same ad contains 'This is a hybrid role based in our new Dallas infrastructure hub' plus the global-estate line; (3) Jun 2025 senior HPC ad contains the Design-and-Build-Engineer sentence and is Dallas-based; (4) eFC Oct 2023 contains 'entirely new engineering and infrastructure hub in Dallas' (author Sarah Butcher); (5) eFC Oct 2025 contains the NorthMark insiders sentence verbatim (3 occurrences, author Alex McMurray) and verifies 'president is former G-Research COO Jen Byrne' and 'Dallas, Texas, home to G-Research's marquee US office'. Live gresearch.com article (15 Jul 2024) verified via WebFetch, but the actual transcript includes disfluencies ('We have a, a tremendous amount of, uh, compute...'), so the quote was corrected to the strictly verbatim fragment 'compute CPU and GPU, multiple eight megawatt data halls' — confirmed grade stands (firm's own site). armadaproject.io and the 2020 G-Research Armada blog verified verbatim; the Armada site does not itself name G-Research as originator, so the publisher description was softened (the origination linkage rests on G-Research's own blog). Confidence grades re-checked: job ads stay inferred even on the firm's own domain; press stays reported; firm's own articles/blogs stay confirmed. Nulls 1 and 4 were adversarially re-tested with fresh searches today and hold (the only vendor case study found, WWT's, is anonymized — matching null 6). Verdict is promote_with_changes solely for the transcript-quote correction and the Armada publisher wording; no facts were dropped and no nulls failed."
+      },
+      {
+        "final_facts": [
+          {
+            "applies_to": "T3-003",
+            "fact_type": "cores",
+            "value": "more than 1,000,000 cores concurrently (Google Cloud, burst capacity for research)",
+            "url": "https://cloud.google.com/transform/citadel-securities-reimagine-quantitative-reseach-cloud-scale-speed",
+            "publisher": "Google Cloud blog (attributed to Costas Bekas, Head of Research Platform, Citadel Securities, and Rohit Bhat, Google Cloud)",
+            "quote": "the firm can spin up more than 1 million cores concurrently",
+            "confidence": "confirmed",
+            "as_of": "2024-04-09"
+          },
+          {
+            "applies_to": "T3-003",
+            "fact_type": "status",
+            "value": "research compute on Google Cloud since 2017; firm previously built an on-premises data center with custom HPC hardware",
+            "url": "https://cloud.google.com/transform/citadel-securities-reimagine-quantitative-reseach-cloud-scale-speed",
+            "publisher": "Google Cloud blog (attributed to Costas Bekas, Head of Research Platform, Citadel Securities, and Rohit Bhat, Google Cloud)",
+            "quote": "At this point — in 2017 — Citadel Securities started working with Google Cloud.",
+            "confidence": "confirmed",
+            "as_of": "2017"
+          },
+          {
+            "applies_to": "T3-003",
+            "fact_type": "cores",
+            "value": "hundreds of thousands of cores required per large-scale simulation (per Research Platform head Costas Bekas)",
+            "url": "https://www.tradersmagazine.com/news/trading-reimagined-qa-with-costas-bekas-of-citadel-securities/",
+            "publisher": "Traders Magazine",
+            "quote": "Simulations like the one we are undertaking require hundreds of thousands of cores",
+            "confidence": "reported",
+            "as_of": "2023-09-06"
+          },
+          {
+            "applies_to": "T3-004",
+            "fact_type": "cores",
+            "value": "50,000 computer cores; over 200 Gbps global connectivity (firm-published, firmwide — location of cores not specified)",
+            "url": "https://www.rentec.com/Home.action?about=true",
+            "publisher": "Renaissance Technologies (rentec.com, official firm website)",
+            "quote": "50,000 computer cores with over 200 gigabits per second of global connectivity",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "T3-004",
+            "fact_type": "other",
+            "value": "research database growing by more than 40 TB/day (firm-published)",
+            "url": "https://www.rentec.com/Home.action?about=true",
+            "publisher": "Renaissance Technologies (rentec.com, official firm website)",
+            "quote": "A research database that grows by more than 40 terabytes a day",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          }
+        ],
+        "final_nulls": [
+          "No public megawatt/power figure exists for Citadel Securities or Citadel LLC research compute. Google Cloud case study and Traders Magazine Q&A give core counts only, never power; re-checked via web search 2026-07-05 with no new source (searches surface Switch's unrelated 'Citadel Campus' data center in Nevada, a different entity).",
+          "No public GPU count or GPU-fleet figure exists for Citadel Securities or Citadel LLC. GPU/accelerator USE is public (Dec-2019 Graphcore IPU microbenchmark technical report by Citadel Securities researchers; 2021 Nvidia GTC A100 tuning talk per eFinancialCareers), but no source states cluster size, GPU type counts, or capacity.",
+          "No public compute-scale, GPU, or power (MW) figure exists for Renaissance Technologies' East Setauket campus specifically. The firm's own 50,000-core / 200 Gbps figure (rentec.com About page, fetched 2026-07-05) is firmwide and does not state where the hardware sits; re-checked via web search 2026-07-05 with no facility-specific source found.",
+          "Town of Brookhaven site-plan records for the Route 25A campus (application 2007, approvals 2009/2011) cover a ~15,757 sq ft office expansion, dining room, and athletic facility — no data-center or substation filing surfaced. The source PDF (brookhavenny.gov DocumentCenter View/1327) is behind a Cloudflare challenge and could not be fetched, so this remains search-snippet-level only and is not submitted as a fact."
+        ],
+        "firm_key": "citadel-rentec",
+        "reasoning": "Fetched all three source URLs directly on 2026-07-05; every quote was found verbatim (or as an exact substring of the page sentence). (1) Google Cloud blog (pub. 2024-04-09) contains 'Now, the firm can spin up more than 1 million cores concurrently' and 'At this point — in 2017 — Citadel Securities started working with Google Cloud', plus the on-prem custom-hardware history — graded confirmed as operator material with the firm's Research Platform head as attributed contributor (byline corrected: Bekas is an attributed contributor/speaker, not co-author). (2) Traders Magazine (2023-09-06) carries the 'hundreds of thousands of cores' Bekas quote — credible press, reported. (3) rentec.com About page (the firm's self-declared official website) states both the '50,000 computer cores with over 200 gigabits per second' and '40 terabytes a day' figures — firm's own material, confirmed; correctly flagged as firmwide with location unstated. Adversarial re-search on 2026-07-05 for Citadel Securities MW/GPU figures and Renaissance East Setauket facility specs surfaced nothing new (only Switch's unrelated 'Citadel Campus' in Nevada), so all four nulls stand. Only change from the researcher's submission is cosmetic publisher/byline wording; no fact dropped, no confidence downgraded.",
+        "verdict": "promote_with_changes"
+      },
+      {
+        "firm_key": "chinese-quants",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "T3-005",
+            "fact_type": "investment",
+            "value": "RMB 1bn (十亿) build cost for Fire-Flyer 2",
+            "url": "https://www.high-flyer.cn/history/",
+            "publisher": "High-Flyer (幻方) official site",
+            "quote": "幻方 AI 投入十亿建设「萤火二号」",
+            "confidence": "confirmed",
+            "as_of": "2021"
+          },
+          {
+            "applies_to": "T3-005",
+            "fact_type": "other",
+            "value": "compute capacity doubled in 2022 via 800-port switch interconnect architecture rework",
+            "url": "https://www.high-flyer.cn/history/",
+            "publisher": "High-Flyer (幻方) official site",
+            "quote": "突破了一期的物理限制，算力扩容翻倍",
+            "confidence": "confirmed",
+            "as_of": "2022"
+          },
+          {
+            "applies_to": "T3-005",
+            "fact_type": "other",
+            "value": "56.74M GPU-hours across 1.35M jobs in 2022, >96% average occupancy",
+            "url": "https://www.high-flyer.cn/history/",
+            "publisher": "High-Flyer (幻方) official site",
+            "quote": "全年运行任务 135 万个，共计 5674 万 GPU 时",
+            "confidence": "confirmed",
+            "as_of": "2022"
+          },
+          {
+            "applies_to": "T3-005",
+            "fact_type": "gpu_count",
+            "value": "10,000 A100s purchased 2021, pre-export-controls (corroborates existing record)",
+            "url": "https://newsletter.semianalysis.com/p/deepseek-debates",
+            "publisher": "SemiAnalysis",
+            "quote": "High-Flyer made an investment in 10,000 A100 GPUs in 2021 before any export restrictions.",
+            "confidence": "reported",
+            "as_of": "2021"
+          },
+          {
+            "applies_to": "Fire-Flyer 1 (High-Flyer, predecessor cluster)",
+            "fact_type": "gpu_count",
+            "value": "1,100 accelerator cards; total investment ~RMB 200M",
+            "url": "https://www.high-flyer.cn/history/",
+            "publisher": "High-Flyer (幻方) official site",
+            "quote": "「萤火一号」总投资近二亿元，搭载 1100 加速卡，于当年正式投用",
+            "confidence": "confirmed",
+            "as_of": "2019-2020"
+          },
+          {
+            "applies_to": "Fire-Flyer 1 (High-Flyer, predecessor cluster)",
+            "fact_type": "power_mw",
+            "value": "0.4 MW (400 KW), basketball-court-sized machine room built 2019",
+            "url": "https://wallstreetcn.com/articles/3737296",
+            "publisher": "华尔街见闻 (Wallstreetcn)",
+            "quote": "在2019年建立了超算机房，占地面积相当于一个篮球场，功耗400KW",
+            "confidence": "reported",
+            "as_of": "2019"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "gpu_count",
+            "value": "~50,000 Hopper GPUs (est.: ~10k H800 + ~10k H100 + H20 orders), shared High-Flyer/DeepSeek, geographically distributed",
+            "url": "https://newsletter.semianalysis.com/p/deepseek-debates",
+            "publisher": "SemiAnalysis",
+            "quote": "We believe they have access to around 50,000 Hopper GPUs",
+            "confidence": "reported",
+            "as_of": "2025-01-31"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "investment",
+            "value": "~$1.6bn total server capex (analyst estimate)",
+            "url": "https://newsletter.semianalysis.com/p/deepseek-debates",
+            "publisher": "SemiAnalysis",
+            "quote": "the total server CapEx for DeepSeek is ~$1.6B",
+            "confidence": "reported",
+            "as_of": "2025-01-31"
+          },
+          {
+            "applies_to": "T3-006",
+            "fact_type": "status",
+            "value": "on-site hiring began Apr 2026: server maintenance engineers and delivery managers to oversee data centre launches in Ulanqab",
+            "url": "https://www.scmp.com/tech/big-tech/article/3349741/deepseek-ramps-hiring-ahead-v4-launch-questions-swirl-over-chip-strategy",
+            "publisher": "South China Morning Post",
+            "quote": "the first time DeepSeek has publicly advertised on-site roles tied directly to its computing infrastructure",
+            "confidence": "reported",
+            "as_of": "2026-04-11"
+          },
+          {
+            "applies_to": "T3-006",
+            "fact_type": "other",
+            "value": "Ulanqab on-site DC ops/delivery roles pay up to RMB 30k/month",
+            "url": "https://finance.sina.com.cn/wm/2026-04-15/doc-inhuqnau4050210.shtml",
+            "publisher": "Sina Finance",
+            "quote": "DeepSeek聘人去内蒙草原\"守机房\"，月薪最高3万元",
+            "confidence": "inferred",
+            "as_of": "2026-04-15"
+          },
+          {
+            "applies_to": "T3-006",
+            "fact_type": "status",
+            "value": "June 2026: hiring extended to 'IDC design planning engineer' — self-build/self-operate posture, design through delivery and ops",
+            "url": "https://36kr.com/p/3877226091180296",
+            "publisher": "36Kr",
+            "quote": "数据中心高级运维工程师、数据中心高级交付经理和IDC设计规划工程师",
+            "confidence": "inferred",
+            "as_of": "2026-06"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "investment",
+            "value": "DeepSeek first external round closed 2026-06-16: RMB 51bn raised at ~RMB 400bn valuation",
+            "url": "https://36kr.com/p/3877226091180296",
+            "publisher": "36Kr",
+            "quote": "募资总额510亿元",
+            "confidence": "reported",
+            "as_of": "2026-06-16"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "investment",
+            "value": "entire ~RMB 50bn round earmarked for compute infrastructure and productization",
+            "url": "https://www.huxiu.com/article/4865742.html",
+            "publisher": "Huxiu (虎嗅)",
+            "quote": "拿到的约500亿融资将全部投向算力基建与产品化两大方向",
+            "confidence": "reported",
+            "as_of": "2026-06-09"
+          },
+          {
+            "applies_to": "T3-007",
+            "fact_type": "status",
+            "value": "Bei Ming (北冥) supercomputing cluster built from 2019; GPU-based, high-scalability; no size figure ever disclosed",
+            "url": "https://www.163.com/dy/article/JRMMDE1F0531M1CO.html",
+            "publisher": "晚点 LatePost (via 163.com)",
+            "quote": "建设\"北冥\"超算集群，其中包括高性能、高扩展性的 GPU 集群",
+            "confidence": "reported",
+            "as_of": "2025-03-27"
+          },
+          {
+            "applies_to": "T3-007",
+            "fact_type": "other",
+            "value": "2022 job ad: procurement manager for overseas/global IDC site selection and leasing",
+            "url": "https://wallstreetcn.com/articles/3737296",
+            "publisher": "华尔街见闻 (Wallstreetcn)",
+            "quote": "九坤投资在2022年的一份招聘信息中，就透露了\"海外选址\"的计划",
+            "confidence": "inferred",
+            "as_of": "2022"
+          },
+          {
+            "applies_to": "T3-007",
+            "fact_type": "other",
+            "value": "AUM ~RMB 80bn as of Q4 2025 (context for compute spend capacity)",
+            "url": "https://www.ubiquant.com/website/about",
+            "publisher": "Ubiquant (九坤投资) official site",
+            "quote": "目前基金资产管理规模约800亿人民币（截至2025年四季度）",
+            "confidence": "confirmed",
+            "as_of": "2025-Q4"
+          },
+          {
+            "applies_to": "T3-008",
+            "fact_type": "gpu_count",
+            "value": "1,500 GPU cards, 30k CPU cores, 1PB RAM, ~5PB disk, 400 PFlops AI compute (end-2022 target, firm's own figures via press interview)",
+            "url": "https://www.cs.com.cn/tzjj/jjks/202209/t20220904_6296007.html",
+            "publisher": "China Securities Journal (中证网)",
+            "quote": "计算集群将拥有1500张GPU卡、3万CPU核……AI算力将达400P Flops",
+            "confidence": "reported",
+            "as_of": "2022-09-04"
+          },
+          {
+            "applies_to": "T3-008",
+            "fact_type": "other",
+            "value": "cluster claimed within top-200 of global TOP500 at end-2021 (company self-claim relayed by press; not verifiable on published TOP500 list)",
+            "url": "https://www.cs.com.cn/tzjj/jjks/202209/t20220904_6296007.html",
+            "publisher": "China Securities Journal (中证网)",
+            "quote": "高性能计算集群已经位列全球超算TOP500前200名",
+            "confidence": "reported",
+            "as_of": "2021-12"
+          }
+        ],
+        "final_nulls": [
+          "DeepSeek Ulanqab (T3-006): NO public facility-level figure exists as of 2026-07-05 — no MW capacity, no GPU count, no site investment amount, no land/rack figure. Press coverage (SCMP 2026-04-11, Sina 2026-04-15, Huxiu 2026-06-09, 36Kr 2026-07-02) covers only job ads, regional advantages, and firm-level financing; a fresh 2026-07-05 search surfaced no facility specs. 'GW-scale ambition' language in aggregator posts is narrative, not a disclosed spec.",
+          "Ubiquant Bei Ming (T3-007): no public GPU count, PFlops, MW, or location for the Bei Ming cluster has ever been disclosed — the LatePost/163.com article (fetched) describes only a 'high-performance, highly scalable GPU cluster' built from 2019, and Ubiquant's own about page (fetched) never names Bei Ming or any compute figure.",
+          "Minghong (T3-008): no public update on cluster scale since the Sept 2022 China Securities Journal interview (1,500 GPUs / 400 PFlops end-2022 target); no MW, no location, no post-2022 GPU figure found — re-searched 2026-07-05 with no Minghong-specific compute results.",
+          "High-Flyer: no 'Fire-Flyer 3' (萤火三号) exists in the public record — re-searched 2026-07-05; the last own-disclosed expansion on high-flyer.cn/history is the 2022 Fire-Flyer 2 capacity doubling. Post-export-control fleet size exists only as third-party analyst estimates (SemiAnalysis ~50k Hopper GPUs), never confirmed by the firm.",
+          "No public statement from High-Flyer/DeepSeek quantifying export-control impact on its clusters; chip sourcing for V4 (Huawei Ascend 950PR per The Information vs Nvidia Blackwell per Reuters) is contested per SCMP 2026-04-11 (fetched), with no firm confirmation."
+        ],
+        "reasoning": "Adversarial pass: fetched all 10 distinct URLs; every one is live and every quote was located in the fetched content, including the four verbatim Chinese quotes on high-flyer.cn/history (plus the 800-port switch detail: 多 800 口交换机互联加核心扩展子树), the SemiAnalysis exact sentences (breakdown ~10k H800 + ~10k H100 + H20 orders; 'shared between High-Flyer and DeepSeek and geographically distributed'), SCMP's 'The move marks the first time...' sentence, the Sina headline, both 36Kr claims (financing sentence: 募资总额510亿元，估值将近4000亿元), the Huxiu earmarking sentence, the LatePost/163 Bei Ming sentence (article confirmed to contain zero quantitative specs), the wallstreetcn 超算地图 quotes, the Ubiquant AUM sentence, and both cs.com.cn Minghong quotes (attributed to a Minghong presentation at the 2022 Lujiazui Forum; figures are explicitly an end-2022 forecast — 预计的2022年底 — which the fact's value already flags). Confidence re-grades hold: firm's own site = confirmed (4 facts + Ubiquant AUM); press = reported; job-ad-derived facts stay inferred even when relayed by press. One change: the 56.74M GPU-hours fact was typed 'energy' but GPU-hours is a utilization metric, not energy — reclassified to 'other'. Known discrepancy preserved: Huxiu (2026-06-09, pre-close) had ~RMB 50bn at RMB 350bn valuation vs 36Kr (post-close) RMB 51bn at ~400bn; the round-size fact correctly cites the later 36Kr figures, and the Huxiu fact is limited to the use-of-proceeds claim, which its URL supports. Nulls re-tested with fresh 2026-07-05 searches: no Ulanqab facility specs, no Fire-Flyer 3, no post-2022 Minghong update surfaced; Bei Ming absence and V4 chip contestation confirmed directly in the fetched articles. All 18 facts survive; verdict is promote_with_changes solely for the fact_type reclassification."
+      },
+      {
+        "firm_key": "two-sigma",
+        "verdict": "promote_with_changes",
+        "final_facts": [
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "600+ PB storage capacity; infrastructure running >110,000 simulations daily (page inconsistently also shows 380+ PB stored and 100,000 simulations elsewhere)",
+            "url": "https://www.twosigma.com/about-us/",
+            "publisher": "Two Sigma",
+            "quote": "uses 600+ PB of storage capacity and infrastructure to run over 110,000 simulations daily",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "compute claimed equivalent to a world top-5 supercomputer site (firm's own unquantified marketing claim; no FLOPS, core, or GPU figure given)",
+            "url": "https://www.twosigma.com/about-us/",
+            "publisher": "Two Sigma",
+            "quote": "Computing power that would rank in the world's top 5 supercomputer sites",
+            "confidence": "confirmed",
+            "as_of": "2026-07-05"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "processing power 'measured in zettaFLOPS' (firm's characterization, likely cumulative ops; no methodology or hardware count disclosed); 300+ PB stored",
+            "url": "https://www.twosigma.com/articles/improving-compute-sustainability-a-case-study/",
+            "publisher": "Two Sigma",
+            "quote": "Employ processing power measured in zettaFLOPS",
+            "confidence": "confirmed",
+            "as_of": "2024-10-07"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "energy",
+            "value": "27 MWh/month (Jan 2023) reduced to 10 MWh/month (Jan 2024) — production hosts of ONE trading engineering team only, not firmwide; do not map as a site power figure",
+            "url": "https://www.twosigma.com/articles/improving-compute-sustainability-a-case-study/",
+            "publisher": "Two Sigma",
+            "quote": "In January 2023, production hosts consumed 27 MWh of electricity. By January 2024, this figure had dropped to 10 MWh.",
+            "confidence": "confirmed",
+            "as_of": "2024-10-07"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "~60 legacy servers decommissioned by one trading team, replaced with denser 28-core-processor servers; 66% absolute power reduction (single-team scope, not firmwide)",
+            "url": "https://www.twosigma.com/articles/improving-compute-sustainability-a-case-study/",
+            "publisher": "Two Sigma",
+            "quote": "They gradually decommissioned approximately 60 legacy servers and reduced their absolute power consumption by 66%.",
+            "confidence": "confirmed",
+            "as_of": "2024-10-07"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "other",
+            "value": "ML research GPUs consumed on-demand via Google Cloud GKE Dynamic Workload Scheduler (+80% GPU obtainability); no GPU counts disclosed — extends existing Google Cloud usage evidence on T3-013",
+            "url": "https://cloud.google.com/blog/products/containers-kubernetes/google-clouds-container-platform-for-the-next-decade-of-ai",
+            "publisher": "Google Cloud (quoting Two Sigma engineer Alex Hays)",
+            "quote": "Dynamic Workload Scheduler improved on-demand GPU obtainability by 80%, accelerating experiment iteration for our researchers.",
+            "confidence": "confirmed",
+            "as_of": "2024-04-09"
+          },
+          {
+            "applies_to": "firmwide",
+            "fact_type": "status",
+            "value": "live trading production hosts implied to sit on the eastern New Jersey (NYSE) and Chicago (CME) exchange grid areas — firm's own emissions analysis chose these two grids; no facility or colo partner named; supports only an inferred link to existing Tier-1 pins, not a new pin",
+            "url": "https://www.twosigma.com/articles/improving-compute-sustainability-a-case-study/",
+            "publisher": "Two Sigma",
+            "quote": "for the grid networks that support the New York Stock Exchange and Chicago Mercantile Exchange",
+            "confidence": "inferred",
+            "as_of": "2024-10-07"
+          }
+        ],
+        "final_nulls": [
+          "No public GPU count or GPU fleet size exists for Two Sigma, on-prem or cloud — the Apr 2024 Google Cloud blog confirms GPU usage on GKE but gives no numbers. (Caution: search summaries misattribute XTX Markets' 25,000-GPU / 650 PB cluster to Two Sigma; the source article assigns those figures to XTX, with none for Two Sigma.)",
+          "No public MW or site-level power figure exists for any Two Sigma facility; the only public energy figures are the single-team 27-to-10 MWh/month case study (Oct 2024 article).",
+          "No newer total node/core count has been published since the 2016 CMU ATLAS traces (1,313 nodes / 31,512 cores); the firm now uses only unquantified 'top-5 supercomputer' and 'zettaFLOPS' language.",
+          "No data center location or colocation partner is named anywhere in the fetchable public record; targeted searches for Two Sigma + New Jersey colocation/megawatts returned nothing usable.",
+          "No Two Sigma engineering-blog or conference talk disclosing cluster size post-2016 was found (Cook scheduler posts and RLlib/Ray material discuss software, not fleet scale)."
+        ],
+        "reasoning": "All three source URLs were fetched live on 2026-07-05 and every quoted string was found verbatim: the about-us page carries both the '600+ PB / 110,000 simulations' and 'top 5 supercomputer sites' claims (alongside internally inconsistent 380+ PB / 100,000 figures, noted in the fact values); the Oct 2024 sustainability case study carries the zettaFLOPS, 300+ PB, 27-to-10 MWh, ~60-server/66% and NYSE/CME-grid passages, and the fetch explicitly confirmed the MWh figures are one trading engineering team's production hosts, not firmwide; the Google Cloud blog carries the Alex Hays Dynamic Workload Scheduler quote with attribution. Confidence grades hold under strict re-grading: twosigma.com pages are the firm's own materials (confirmed); the Google Cloud blog is the compute operator's own publication quoting the firm's engineer (confirmed); the NYSE/CME grid location signal is the firm's material but the colocation conclusion is triangulated, so it stays inferred. One typing correction: the server-decommissioning fact was re-typed from 'cores' to 'other' since it records a server count and power reduction, not a core total. Adversarial null-testing found one landmine — a web-search summary that attributed '25,000 GPUs and 650 PB' to Two Sigma; fetching the underlying substack article confirmed those figures belong to XTX Markets (Gerko's 'matrices' quote) and the article gives no infrastructure numbers for Two Sigma, so the GPU null survives with a warning appended. Fresh searches for Two Sigma MW figures, named facilities, or colo partners returned nothing, so all five nulls stand. Verdict is promote_with_changes for the minor fact_type fix and clarifying caveats added to values; no facts were dropped."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Research"
+    },
+    {
+      "type": "workflow_phase",
+      "index": 2,
+      "title": "Verify"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "research:xtx",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ac7f855f69367d4a1",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410535,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "xtx",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: XTX Markets\nFacilities: Kajaani campus building 1 (T3-001, 22.5MW IT, 15,000 sqm) and building 2 (T3-017, under construction), Verne Global Keflavik tenancy (T3-002).\nGAPS: (1)…",
+      "lastProgressAt": 1783278092591,
+      "tokens": 81801,
+      "toolCalls": 49,
+      "durationMs": 682055,
+      "resultPreview": "{\"firm_key\":\"xtx\",\"facts\":[{\"applies_to\":\"T3-001\",\"fact_type\":\"power_mw\",\"value\":\"22.5 MW IT capacity across three data halls; 15,000 sqm building\",\"url\":\"https://files.xtxmarkets.com/publications/kajaani/index.html\",\"publisher\":\"XTX Markets\",\"quote\":\"The centre is comprised of three data halls totalling 22.5MW of IT power\",\"confidence\":\"confirmed\",\"as_of\":\"2025-01-22\"},{\"applies_to\":\"T3-001\",\"fac…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "research:jane-street",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "aecf2912940149063",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410536,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "jane-street",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: Jane Street\nFacilities: Dallas-area AI training DC (T3-009, 4,032 liquid-cooled GPUs per their careers page), CoreWeave $6bn agreement (T3-010, Apr 2026).\nGAPS: (1) Power (MW) …",
+      "lastProgressAt": 1783277813507,
+      "tokens": 59809,
+      "toolCalls": 29,
+      "durationMs": 402971,
+      "resultPreview": "{\"firm_key\":\"jane-street\",\"facts\":[{\"applies_to\":\"T3-009\",\"fact_type\":\"gpu_count\",\"value\":\"4,032 liquid-cooled GPUs\",\"url\":\"https://www.janestreet.com/join-jane-street/machine-learning/\",\"publisher\":\"Jane Street (own careers/ML page)\",\"quote\":\"4,032 GPUs, liquid cooled\",\"confidence\":\"confirmed\",\"as_of\":\"2026-07-05\"},{\"applies_to\":\"T3-009\",\"fact_type\":\"status\",\"value\":\"operational; located in Dalla…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "research:hrt",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "adb6dddc4f194596c",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410536,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "hrt",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: Hudson River Trading\nFacilities: Lefdal Mine Datacenter deployment, Norway (T3-011, >125kW/rack DLC, Dell XE9685L + NVIDIA HGX); Google Cloud (2024) and Lambda (2026) capacity.…",
+      "lastProgressAt": 1783277885472,
+      "tokens": 59362,
+      "toolCalls": 34,
+      "durationMs": 474936,
+      "resultPreview": "{\"firm_key\":\"hrt\",\"facts\":[{\"applies_to\":\"T3-011\",\"fact_type\":\"other\",\"value\":\">125 kW per rack, direct-liquid-cooled NVIDIA Blackwell GPU racks\",\"url\":\"https://www.facebook.com/hudsonrivertrading/posts/to-reach-the-servers-at-lefdal-mine-data-centers-you-have-to-tunnel-into-a-norwe/1606192637895717/\",\"publisher\":\"Hudson River Trading (official Facebook)\",\"quote\":\"direct-liquid-cooled racks of NVI…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "research:jump",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ad47683fc7a4da186",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410536,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "jump",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: Jump Trading\nFacilities: Vera Rubin NVL72 cluster (T3-015, location undisclosed), Carrollton TX HPC DC (T3-016, from job ads).\nGAPS: (1) Vera Rubin deployment size (number of N…",
+      "lastProgressAt": 1783277891447,
+      "tokens": 69655,
+      "toolCalls": 37,
+      "durationMs": 480911,
+      "resultPreview": "{\"firm_key\":\"jump\",\"facts\":[{\"applies_to\":\"T3-015\",\"fact_type\":\"status\",\"value\":\"Vera Rubin NVL72 deployment publicly announced 2026-03-17; no rack or GPU count disclosed\",\"url\":\"https://www.linkedin.com/posts/jump-trading_today-jump-trading-became-one-of-the-first-activity-7439690776311365632-YnM9\",\"publisher\":\"Jump Trading (LinkedIn)\",\"quote\":\"one of the first financial services firms to deploy …"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "research:g-research",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a21dac4e52d5fff39",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410537,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "g-research",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: G-Research\nFacility locations undisclosed (T3-014); their archived job ads describe 'a global estate of data centres'.\nGAPS: (1) Exact public phrasing on estate scale — one arc…",
+      "lastProgressAt": 1783278136772,
+      "tokens": 78416,
+      "toolCalls": 42,
+      "durationMs": 726235,
+      "resultPreview": "{\"firm_key\":\"g-research\",\"facts\":[{\"applies_to\":\"T3-014\",\"fact_type\":\"other\",\"value\":\"global estate of data centres with multiple megawatts of capacity (locations undisclosed)\",\"url\":\"https://web.archive.org/web/20241129110733/https://www.gresearch.com/vacancy/R2823-Data-Centre-Engineer/\",\"publisher\":\"G-Research careers page (Wayback Machine capture)\",\"quote\":\"The Data Centre Team manages a global…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "research:citadel-rentec",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a4500586e9d7c9a5a",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410537,
+      "queuedAt": 1783277410516,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "citadel-rentec",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: Citadel Securities + Renaissance Technologies\nCitadel Securities (T3-003): 'more than 1 million cores concurrently' on Google Cloud per joint case study.\nGAPS: (1) Any public M…",
+      "lastProgressAt": 1783277826932,
+      "tokens": 60983,
+      "toolCalls": 30,
+      "durationMs": 416395,
+      "resultPreview": "{\"firm_key\":\"citadel-rentec\",\"facts\":[{\"applies_to\":\"T3-003\",\"fact_type\":\"cores\",\"value\":\"more than 1,000,000 cores concurrently (Google Cloud, burst capacity for research)\",\"url\":\"https://cloud.google.com/transform/citadel-securities-reimagine-quantitative-reseach-cloud-scale-speed\",\"publisher\":\"Google Cloud (blog co-authored by Costas Bekas, Head of Research Platform, Citadel Securities)\",\"quote…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "research:chinese-quants",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "a6fdfb509190d76a7",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410537,
+      "queuedAt": 1783277410517,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "chinese-quants",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: High-Flyer/DeepSeek, Ubiquant, Minghong\nExisting records: Fire-Flyer 2 (T3-005: 10k A100s, ~3MW per own SC24 paper), DeepSeek Ulanqab (T3-006, job-ad signal, under construction…",
+      "lastProgressAt": 1783278014351,
+      "tokens": 73469,
+      "toolCalls": 39,
+      "durationMs": 603814,
+      "resultPreview": "{\"firm_key\":\"chinese-quants\",\"facts\":[{\"applies_to\":\"T3-005\",\"fact_type\":\"investment\",\"value\":\"RMB 1bn (十亿) build cost for Fire-Flyer 2\",\"url\":\"https://www.high-flyer.cn/history/\",\"publisher\":\"High-Flyer (幻方) official site\",\"quote\":\"幻方 AI 投入十亿建设「萤火二号」\",\"confidence\":\"confirmed\",\"as_of\":\"2021\"},{\"applies_to\":\"T3-005\",\"fact_type\":\"other\",\"value\":\"compute capacity doubled in 2022 via 800-port switch i…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "research:two-sigma",
+      "phaseIndex": 1,
+      "phaseTitle": "Research",
+      "agentId": "ae34fc07a83ff489f",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277410537,
+      "queuedAt": 1783277410517,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "two-sigma",
+      "promptPreview": "You are researching public compute/power figures for a rigorously sourced map of quant-finance compute infrastructure. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFIRM: Two Sigma\nExisting record (T3-013): 2016 CMU ATLAS traces = two private DCs, 1,313 nodes / 31,512 cores; Google Cloud usage per engineering blog.\nGAPS: (1) Any NEWER public com…",
+      "lastProgressAt": 1783277770129,
+      "tokens": 58886,
+      "toolCalls": 27,
+      "durationMs": 359592,
+      "resultPreview": "{\"firm_key\":\"two-sigma\",\"facts\":[{\"applies_to\":\"firmwide\",\"fact_type\":\"other\",\"value\":\"600+ PB storage capacity; infrastructure running >110,000 simulations daily (updates older 300-380 PB / 100k figures)\",\"url\":\"https://www.twosigma.com/about-us/\",\"publisher\":\"Two Sigma\",\"quote\":\"uses 600+ PB of storage capacity and infrastructure to run over 110,000 simulations daily\",\"confidence\":\"confirmed\",\"a…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "verify:two-sigma",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "afd02c4a6939a7708",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277770145,
+      "queuedAt": 1783277770134,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "two-sigma",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783277895178,
+      "tokens": 37128,
+      "toolCalls": 9,
+      "durationMs": 125033,
+      "resultPreview": "{\"firm_key\":\"two-sigma\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"firmwide\",\"fact_type\":\"other\",\"value\":\"600+ PB storage capacity; infrastructure running >110,000 simulations daily (page inconsistently also shows 380+ PB stored and 100,000 simulations elsewhere)\",\"url\":\"https://www.twosigma.com/about-us/\",\"publisher\":\"Two Sigma\",\"quote\":\"uses 600+ PB of storage capacity and in…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "verify:jane-street",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a02ce7ce0f5cc40a7",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277813510,
+      "queuedAt": 1783277813509,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "jane-street",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783277944762,
+      "tokens": 35544,
+      "toolCalls": 7,
+      "durationMs": 131252,
+      "resultPreview": "{\"firm_key\":\"jane-street\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"T3-009\",\"fact_type\":\"gpu_count\",\"value\":\"4,032 liquid-cooled GPUs\",\"url\":\"https://www.janestreet.com/join-jane-street/machine-learning/\",\"publisher\":\"Jane Street (own careers/ML page)\",\"quote\":\"come tour our new Texas datacenter: 4,032 GPUs, liquid cooled\",\"confidence\":\"confirmed\",\"as_of\":\"2026-07-05\"},{\"appli…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 11,
+      "label": "verify:citadel-rentec",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a85dbcd5d135a8d6d",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277826939,
+      "queuedAt": 1783277826938,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "citadel-rentec",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783277923575,
+      "tokens": 35287,
+      "toolCalls": 7,
+      "durationMs": 96636,
+      "resultPreview": "{\"final_facts\":[{\"applies_to\":\"T3-003\",\"fact_type\":\"cores\",\"value\":\"more than 1,000,000 cores concurrently (Google Cloud, burst capacity for research)\",\"url\":\"https://cloud.google.com/transform/citadel-securities-reimagine-quantitative-reseach-cloud-scale-speed\",\"publisher\":\"Google Cloud blog (attributed to Costas Bekas, Head of Research Platform, Citadel Securities, and Rohit Bhat, Google Cloud)\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 12,
+      "label": "verify:hrt",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a3fbf73ccb98302d5",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277885474,
+      "queuedAt": 1783277885473,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "hrt",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783277989802,
+      "tokens": 37686,
+      "toolCalls": 11,
+      "durationMs": 104328,
+      "resultPreview": "{\"firm_key\":\"hrt\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"T3-011\",\"fact_type\":\"other\",\"value\":\">125 kW per rack, direct-liquid-cooled NVIDIA Blackwell GPU racks\",\"url\":\"https://www.facebook.com/hudsonrivertrading/posts/to-reach-the-servers-at-lefdal-mine-data-centers-you-have-to-tunnel-into-a-norwe/1606192637895717/\",\"publisher\":\"Hudson River Trading (official Facebook)\",\"qu…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 13,
+      "label": "verify:jump",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "af961e1a4a9a049a9",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783277891455,
+      "queuedAt": 1783277891454,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "jump",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783278097694,
+      "tokens": 44607,
+      "toolCalls": 14,
+      "durationMs": 206239,
+      "resultPreview": "{\"firm_key\":\"jump\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"T3-015\",\"fact_type\":\"status\",\"value\":\"Vera Rubin NVL72 deployment publicly announced 2026-03-17; no rack or GPU count disclosed\",\"url\":\"https://www.linkedin.com/posts/jump-trading_today-jump-trading-became-one-of-the-first-activity-7439690776311365632-YnM9\",\"publisher\":\"Jump Trading (LinkedIn)\",\"quote\":\"one of the fi…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 14,
+      "label": "verify:chinese-quants",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a79235a51ae0aefd7",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783278014354,
+      "queuedAt": 1783278014353,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "chinese-quants",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783278262822,
+      "tokens": 47399,
+      "toolCalls": 15,
+      "durationMs": 248468,
+      "resultPreview": "{\"firm_key\":\"chinese-quants\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"T3-005\",\"fact_type\":\"investment\",\"value\":\"RMB 1bn (十亿) build cost for Fire-Flyer 2\",\"url\":\"https://www.high-flyer.cn/history/\",\"publisher\":\"High-Flyer (幻方) official site\",\"quote\":\"幻方 AI 投入十亿建设「萤火二号」\",\"confidence\":\"confirmed\",\"as_of\":\"2021\"},{\"applies_to\":\"T3-005\",\"fact_type\":\"other\",\"value\":\"compute capacit…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 15,
+      "label": "verify:xtx",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a4a5021e6433e17cf",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783278092592,
+      "queuedAt": 1783278092592,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "xtx",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783278381719,
+      "tokens": 51715,
+      "toolCalls": 25,
+      "durationMs": 289127,
+      "resultPreview": "{\"firm_key\":\"xtx\",\"verdict\":\"promote\",\"final_facts\":[{\"applies_to\":\"T3-001\",\"fact_type\":\"power_mw\",\"value\":\"22.5 MW IT capacity across three data halls; 15,000 sqm building\",\"url\":\"https://files.xtxmarkets.com/publications/kajaani/index.html\",\"publisher\":\"XTX Markets\",\"quote\":\"The centre is comprised of three data halls totalling 22.5MW of IT power\",\"confidence\":\"confirmed\",\"as_of\":\"2025-01-22\"},{…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 16,
+      "label": "verify:g-research",
+      "phaseIndex": 2,
+      "phaseTitle": "Verify",
+      "agentId": "a16b18a5bb8782728",
+      "model": "claude-fable-5",
+      "state": "done",
+      "startedAt": 1783278136783,
+      "queuedAt": 1783278136782,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "lastToolSummary": "g-research",
+      "promptPreview": "Adversarial fact-checker. Default stance: REFUTE. Today is 2026-07-05.\nFIRST: load web tools with one ToolSearch call: \"select:WebFetch,WebSearch\".\nRULES:\n- Only public-record facts. Every fact needs a URL you actually fetched whose content supports it. Never invent URLs.\n- confirmed = primary (firm's own materials, operator/contractor docs, regulator); reported = credible press; inferred = job ad…",
+      "lastProgressAt": 1783278563984,
+      "tokens": 47872,
+      "toolCalls": 23,
+      "durationMs": 427201,
+      "resultPreview": "{\"firm_key\":\"g-research\",\"verdict\":\"promote_with_changes\",\"final_facts\":[{\"applies_to\":\"T3-014\",\"fact_type\":\"other\",\"value\":\"global estate of data centres with multiple megawatts of capacity (locations undisclosed)\",\"url\":\"https://web.archive.org/web/20241129110733/https://www.gresearch.com/vacancy/R2823-Data-Centre-Engineer/\",\"publisher\":\"G-Research careers page (Wayback Machine capture; London/S…"
+    }
+  ],
+  "totalTokens": 879619,
+  "totalToolCalls": 398
+}
