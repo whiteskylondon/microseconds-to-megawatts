@@ -5,11 +5,16 @@ documented quant/HFT infrastructure, with an evidence grade on every record.
 
 ## Structure
 
-- `data/sites_seed.csv` — the inventory (19 seed records; target ~80-120)
-- `build_map.py` — CSV → standalone kepler.gl HTML
+- `data/sites_seed.csv` — the site inventory (target ~80-120 records)
+- `data/paths.csv` — Tier-2 arcs (origin/dest site_ids, operator, medium),
+  rendered as a kepler arc layer
+- `build_map.py` — CSVs → standalone kepler.gl HTML
   (`python build_map.py --out docs/index.html`)
+- `pipeline/geocode.py` — Nominatim geocoder (rate-limited, cached) for
+  verifying coordinates against documented addresses
 - `docs/index.html` — output (tracked; servable via GitHub Pages); embeddable
   in Ghost via iframe or direct upload
+- `ENRICHMENT.md` — candidate records awaiting research/verification
 
 ## Schema
 
@@ -18,8 +23,15 @@ documented quant/HFT infrastructure, with an evidence grade on every record.
 | `tier` | `execution` (exchange colo) / `network` (microwave, shortwave) / `research` (ML compute) |
 | `coord_precision` | `exact` (verified address/geocode) / `approximate` (needs verification) / `city_level` / `symbolic` (no single site exists, e.g. cloud usage) |
 | `confidence` | `confirmed` (primary source: license, filing, corporate announcement) / `reported` (credible press) / `inferred` (triangulated from job ads, LinkedIn, network data) |
-| `evidence_type` | `spectrum_license` / `planning_docs` / `exchange_docs` / `corporate_announcement` / `operator_docs` / `press` |
-| `verify_url_hint` | where to find the primary source (replace with real URLs before publication) |
+| `evidence_type` | `spectrum_license` / `planning_docs` / `exchange_docs` / `corporate_announcement` / `operator_docs` / `press` / `regulatory_docs` / `academic` / `job_posting` |
+| `status` | `active` / `historical` (e.g. Basildon, Moscow) / `under_construction` |
+| `power_mw` | numeric IT/campus power where a public source states it; blank otherwise |
+| `evidence_url` | working public URL for the strongest source backing the record |
+| `verify_url_hint` | legacy pointer for pre-enrichment records (being replaced by `evidence_url`) |
+
+`data/paths.csv` (Tier-2 arcs): `path_id`, `origin_site_id`, `dest_site_id`,
+`operator`, `medium` (`microwave`/`mm-wave`/`laser`/`shortwave`/`fiber`),
+`status`, `confidence`, `evidence_note`, `evidence_url`.
 
 **Publication rule: every pin must carry a public primary or credible secondary
 source. Nothing gets mapped that isn't already in the public record.**
