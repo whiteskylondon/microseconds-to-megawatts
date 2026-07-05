@@ -1,0 +1,905 @@
+{
+  "summary": "Find and verify the official homepage for each of the 137 firms",
+  "agentCount": 10,
+  "logs": [
+    "Websites found for 135/137 firms"
+  ],
+  "result": {
+    "results": [
+      {
+        "firm": "Akuna Capital — USA, Chicago",
+        "website": "https://akunacapital.com",
+        "note": null
+      },
+      {
+        "firm": "AQR Capital — USA, Greenwich CT",
+        "website": "https://www.aqr.com",
+        "note": null
+      },
+      {
+        "firm": "Aquatic Capital Management — United States, Chicago",
+        "website": "https://www.aquatic.com",
+        "note": null
+      },
+      {
+        "firm": "Arrowstreet Capital — United States, Boston",
+        "website": "https://www.arrowstreetcapital.com",
+        "note": "arrowstreet.com is a separate unrelated firm; arrowstreetcapital.com is the Boston quant manager."
+      },
+      {
+        "firm": "Balyasny (BAM) — USA, Chicago",
+        "website": "https://www.bamfunds.com",
+        "note": null
+      },
+      {
+        "firm": "Belvedere Trading — United States, Chicago",
+        "website": "https://www.belvederetrading.com",
+        "note": null
+      },
+      {
+        "firm": "Bridgewater — USA, Westport CT",
+        "website": "https://www.bridgewater.com",
+        "note": null
+      },
+      {
+        "firm": "Castle Ridge Asset Management — Canada, Toronto",
+        "website": "https://castleridgemgt.com",
+        "note": null
+      },
+      {
+        "firm": "Chicago Trading Co (CTC) — USA, Chicago",
+        "website": "https://www.chicagotrading.com",
+        "note": null
+      },
+      {
+        "firm": "Citadel (hedge fund) — USA, Miami/Chicago",
+        "website": "https://www.citadel.com",
+        "note": null
+      },
+      {
+        "firm": "Citadel Securities — USA, Miami HQ",
+        "website": "https://www.citadelsecurities.com",
+        "note": null
+      },
+      {
+        "firm": "Cumberland (DRW) — USA, Chicago",
+        "website": "https://www.cumberland.io",
+        "note": "Cumberland's own dedicated domain; also reachable via drw.com/cumberland as a DRW subsidiary."
+      },
+      {
+        "firm": "D.E. Shaw — USA, NYC",
+        "website": "https://www.deshaw.com",
+        "note": null
+      },
+      {
+        "firm": "DRW — USA, Chicago",
+        "website": "https://www.drw.com",
+        "note": null
+      },
+      {
+        "firm": "Eagle Seven",
+        "website": "https://www.eagleseven.com",
+        "note": "Chicago prop trading firm; verified homepage. A separate eagle-seven.com exists but is a different entity."
+      },
+      {
+        "firm": "Eladian Partners",
+        "website": null,
+        "note": "No live official site; eladian.com is a parked GoDaddy for-sale domain and firm appears defunct (Crunchbase: permanently closed). Only third-party profiles found."
+      },
+      {
+        "firm": "Engineers Gate",
+        "website": "https://www.eglp.com",
+        "note": null
+      },
+      {
+        "firm": "ExodusPoint",
+        "website": "https://www.exoduspoint.com",
+        "note": null
+      },
+      {
+        "firm": "Five Rings",
+        "website": "https://fiverings.com",
+        "note": null
+      },
+      {
+        "firm": "Graham Capital Management",
+        "website": "https://www.grahamcapital.com",
+        "note": null
+      },
+      {
+        "firm": "Group One Trading",
+        "website": "https://group1.com",
+        "note": null
+      },
+      {
+        "firm": "GTS",
+        "website": "https://gtsx.com",
+        "note": "Global Trading Systems (GTS), NYC market maker; homepage is gtsx.com."
+      },
+      {
+        "firm": "Hard Eight Trading",
+        "website": "https://www.hard8trading.com",
+        "note": null
+      },
+      {
+        "firm": "Headlands Technologies",
+        "website": "https://headlandstech.com",
+        "note": null
+      },
+      {
+        "firm": "Hudson River Trading",
+        "website": "https://www.hudsonrivertrading.com",
+        "note": null
+      },
+      {
+        "firm": "Jane Street",
+        "website": "https://www.janestreet.com",
+        "note": null
+      },
+      {
+        "firm": "Jump Trading",
+        "website": "https://www.jumptrading.com",
+        "note": null
+      },
+      {
+        "firm": "Millburn Ridgefield",
+        "website": "https://millburn.com",
+        "note": null
+      },
+      {
+        "firm": "Millennium — USA, NYC",
+        "website": "https://www.mlp.com",
+        "note": "Millennium Management's official homepage is at mlp.com."
+      },
+      {
+        "firm": "Old Mission — USA, Chicago/NYC",
+        "website": "https://www.oldmissioncapital.com",
+        "note": null
+      },
+      {
+        "firm": "PDT Partners — USA, NYC",
+        "website": "https://pdtpartners.com",
+        "note": null
+      },
+      {
+        "firm": "PEAK6 Capital Management — United States, Austin",
+        "website": "https://peak6.com",
+        "note": "PEAK6 Capital Management is a division; corporate homepage is peak6.com (Capital Management page: peak6.com/peak6-capital-management/)."
+      },
+      {
+        "firm": "Point72 / Cubist — USA, Stamford CT",
+        "website": "https://point72.com",
+        "note": "Cubist Systematic Strategies is Point72's systematic division; its page is point72.com/cubist/."
+      },
+      {
+        "firm": "Quantitative Investment Management (QIM) — United States, Charlottesville",
+        "website": "https://quantitative.com",
+        "note": null
+      },
+      {
+        "firm": "Quantlab — USA, Houston",
+        "website": "https://www.quantlab.com",
+        "note": null
+      },
+      {
+        "firm": "Radix Trading — USA, Chicago",
+        "website": "https://radixtrading.co",
+        "note": "Homepage is radixtrading.co; do not confuse with radix.trading (an unrelated crypto trading firm)."
+      },
+      {
+        "firm": "Renaissance Technologies — USA, East Setauket NY",
+        "website": "https://www.rentec.com",
+        "note": null
+      },
+      {
+        "firm": "SBB Research Group — United States, Northbrook",
+        "website": "https://www.sbbrg.com",
+        "note": "sbbrg.com is the firm; sbbrg.org is its separate philanthropic foundation."
+      },
+      {
+        "firm": "Schonfeld Strategic Advisors — United States, New York",
+        "website": "https://www.schonfeld.com",
+        "note": null
+      },
+      {
+        "firm": "Susquehanna (SIG) — USA, Bala Cynwyd PA",
+        "website": "https://sig.com",
+        "note": null
+      },
+      {
+        "firm": "Teza Technologies (Teza Group) — United States, Chicago",
+        "website": "https://www.teza.com",
+        "note": null
+      },
+      {
+        "firm": "TGS Management — United States, Irvine",
+        "website": "https://www.tgsmc.com",
+        "note": null
+      },
+      {
+        "firm": "Tower Research Capital",
+        "website": "https://tower-research.com",
+        "note": null
+      },
+      {
+        "firm": "Two Sigma",
+        "website": "https://www.twosigma.com",
+        "note": null
+      },
+      {
+        "firm": "Vatic Labs (Vatic Investments)",
+        "website": "https://www.vaticlabs.ai",
+        "note": "Firm brands itself 'Vatic Labs'; 'Vatic Investments' is the same NYC quant firm."
+      },
+      {
+        "firm": "Verition Fund Management",
+        "website": "https://www.verition.com",
+        "note": null
+      },
+      {
+        "firm": "Virtu Financial",
+        "website": "https://www.virtu.com",
+        "note": null
+      },
+      {
+        "firm": "Voleon Group",
+        "website": "https://voleon.com",
+        "note": null
+      },
+      {
+        "firm": "Walleye Capital",
+        "website": "https://walleyecapital.com",
+        "note": null
+      },
+      {
+        "firm": "Wolverine Trading",
+        "website": "https://www.wolve.com",
+        "note": null
+      },
+      {
+        "firm": "WorldQuant",
+        "website": "https://www.worldquant.com",
+        "note": null
+      },
+      {
+        "firm": "XR Trading",
+        "website": "https://www.xrtrading.com",
+        "note": null
+      },
+      {
+        "firm": "Aspect Capital",
+        "website": "https://www.aspectcapital.com",
+        "note": null
+      },
+      {
+        "firm": "Assenagon",
+        "website": "https://www.assenagon.com",
+        "note": "German/EU asset manager; site has geo access restrictions (US/CA/JP/AU) but is the official homepage."
+      },
+      {
+        "firm": "Cantab (GAM Systematic)",
+        "website": "https://www.gam.com/en/our-capabilities/gam-cantab",
+        "note": "Cantab Capital Partners was acquired by GAM (2016) and renamed GAM Systematic Cambridge / GAM Cantab; this is the current official page. Legacy site cantabcapital.com still resolves but the firm now sits under gam.com."
+      },
+      {
+        "firm": "Capital Fund Management (CFM)",
+        "website": "https://www.cfm.fr",
+        "note": "Primary corporate homepage; cfm.com is a parallel domain also used by the firm."
+      },
+      {
+        "firm": "Da Vinci Trading (Da Vinci Derivatives)",
+        "website": "https://davincitrading.com",
+        "note": "Firm rebranded from 'Da Vinci Derivatives' to 'Da Vinci Trading'; official site is davincitrading.com."
+      },
+      {
+        "firm": "Florin Court",
+        "website": "https://florincourt.com",
+        "note": null
+      },
+      {
+        "firm": "Flow Traders",
+        "website": "https://www.flowtraders.com",
+        "note": null
+      },
+      {
+        "firm": "G-Research",
+        "website": "https://www.gresearch.com",
+        "note": null
+      },
+      {
+        "firm": "GSA Capital",
+        "website": "https://www.gsacapital.com",
+        "note": null
+      },
+      {
+        "firm": "IMC Trading",
+        "website": "https://www.imc.com",
+        "note": null
+      },
+      {
+        "firm": "Man Group (AHL/Numeric)",
+        "website": "https://www.man.com",
+        "note": "AHL and Numeric are investment engines under Man Group (man.com/ahl); no separate corporate homepages."
+      },
+      {
+        "firm": "Marshall Wace (TOPS)",
+        "website": "https://www.mwam.com",
+        "note": null
+      },
+      {
+        "firm": "Maven Securities",
+        "website": "https://www.mavensecurities.com",
+        "note": null
+      },
+      {
+        "firm": "Optiver",
+        "website": "https://www.optiver.com",
+        "note": null
+      },
+      {
+        "firm": "Quadrature Capital",
+        "website": "https://www.quadrature.ai",
+        "note": "Official homepage is on the .ai TLD (quadrature.ai)."
+      },
+      {
+        "firm": "Quantica Capital",
+        "website": "https://quantica-capital.com",
+        "note": null
+      },
+      {
+        "firm": "Qube Research & Technologies",
+        "website": "https://www.qube-rt.com",
+        "note": null
+      },
+      {
+        "firm": "RSJ Securities",
+        "website": "https://www.rsj.com",
+        "note": "RSJ Securities section lives under the RSJ group site rsj.com (e.g. rsj.com/en/securities/)."
+      },
+      {
+        "firm": "Squarepoint Capital",
+        "website": "https://www.squarepoint-capital.com",
+        "note": null
+      },
+      {
+        "firm": "Systematica",
+        "website": "https://www.systematica.com",
+        "note": null
+      },
+      {
+        "firm": "Wintermute",
+        "website": "https://www.wintermute.com",
+        "note": null
+      },
+      {
+        "firm": "Winton",
+        "website": "https://www.winton.com",
+        "note": null
+      },
+      {
+        "firm": "XTX Markets",
+        "website": "https://www.xtxmarkets.com",
+        "note": null
+      },
+      {
+        "firm": "AlphaGrep Securities",
+        "website": "https://www.alpha-grep.com",
+        "note": "Trading/prop arm at alpha-grep.com; the separate asset-management affiliate is alphagrepim.com."
+      },
+      {
+        "firm": "Amber Group",
+        "website": "https://www.ambergroup.io",
+        "note": null
+      },
+      {
+        "firm": "APT Portfolio (A.P.T. Portfolio)",
+        "website": "https://aptportfolio.com",
+        "note": "Site titled 'APT Research'; the New Delhi proprietary trading firm (A.P.T. = Algorithms, Profit and Trust)."
+      },
+      {
+        "firm": "Auros",
+        "website": "https://www.auros.global",
+        "note": null
+      },
+      {
+        "firm": "Baiont Quant",
+        "website": "https://baiont.ai",
+        "note": "Chinese name 倍漾量化, Nanjing-based AI-native quant fund."
+      },
+      {
+        "firm": "Blackwing Asset Management (黑翼资产)",
+        "website": "https://www.blackwingasset.com",
+        "note": null
+      },
+      {
+        "firm": "Century Frontier Asset Management (世纪前沿)",
+        "website": "https://www.centuryfrontier.com",
+        "note": null
+      },
+      {
+        "firm": "Chengqi Asset Management (诚奇资产)",
+        "website": "https://www.cqfunds.com",
+        "note": null
+      },
+      {
+        "firm": "Dharma Capital",
+        "website": "https://www.dharmacapital.co.jp",
+        "note": "Tokyo JPX-colocation HFT firm (ダルマ・キャピタル株式会社); NOT darma.capital, which is an unrelated US crypto/DeFi firm."
+      },
+      {
+        "firm": "Dolat Capital",
+        "website": "https://www.dolatcapital.com",
+        "note": "Primary corporate/asset-management homepage; firm also runs dolatcapital.in for its research/dev arm."
+      },
+      {
+        "firm": "Eclipse Trading",
+        "website": "https://www.eclipsetrading.com",
+        "note": null
+      },
+      {
+        "firm": "Estee Advisors",
+        "website": "https://esteeadvisors.com",
+        "note": null
+      },
+      {
+        "firm": "Evolution Asset Management (进化论资产)",
+        "website": "https://www.jhlfund.com",
+        "note": null
+      },
+      {
+        "firm": "Fount",
+        "website": "https://fount.co",
+        "note": "Korean robo-advisor (Fount Inc., Seoul); corporate subsite at corp.fount.co."
+      },
+      {
+        "firm": "GCI Asset Management",
+        "website": "https://www.gci.jp",
+        "note": "Tokyo HQ site (JP/EN); firm also uses gci-am.com as an international-facing site."
+      },
+      {
+        "firm": "Genk Capital",
+        "website": "https://genkcapital.com",
+        "note": null
+      },
+      {
+        "firm": "Grasshopper",
+        "website": "https://grasshopperasia.com",
+        "note": "Prop-trading firm site; the separate asset-management arm uses gham.asia."
+      },
+      {
+        "firm": "Graviton Research Capital",
+        "website": "https://www.gravitontrading.com",
+        "note": null
+      },
+      {
+        "firm": "GSR",
+        "website": "https://www.gsr.io",
+        "note": null
+      },
+      {
+        "firm": "High-Flyer / DeepSeek",
+        "website": "https://www.high-flyer.cn",
+        "note": "High-Flyer (幻方量化) quant fund homepage (EN version at /en); DeepSeek is its spin-off AI firm at deepseek.com."
+      },
+      {
+        "firm": "Inno Asset Management (因诺资产)",
+        "website": "http://www.innoam.com",
+        "note": "Registered entity is 因诺(上海) (Shanghai); HTTP-only site."
+      },
+      {
+        "firm": "iRage (iRageCapital Advisory)",
+        "website": "https://irage.in",
+        "note": null
+      },
+      {
+        "firm": "Jinge Liangrui (金戈量锐)",
+        "website": "http://jingefund.com",
+        "note": "Ningbo 金戈量锐 (Ningbo Jinge Liangrui Asset Mgmt); HTTP-only site, corroborated by @jingefund.com contact email; could not fetch over HTTPS."
+      },
+      {
+        "firm": "Lingjun Investment (灵均) — China, Beijing",
+        "website": "https://www.lingjuninvest.com",
+        "note": null
+      },
+      {
+        "firm": "Linitics — Singapore, Singapore",
+        "website": "https://linitics.com",
+        "note": null
+      },
+      {
+        "firm": "Longqi Technology (龙旗科技) — China, Hangzhou",
+        "website": "https://sci-inv.com",
+        "note": "Firm trades as Longqi/Hangzhou Longqi Scientific Investment; official site is sci-inv.com (English: en.sci-inv.com)."
+      },
+      {
+        "firm": "Minghong (明汯) — China, Shanghai",
+        "website": "https://www.mhfunds.com",
+        "note": null
+      },
+      {
+        "firm": "Mingshi Fund (鸣石基金) — China, Shanghai",
+        "website": "https://www.mingshiim.com",
+        "note": null
+      },
+      {
+        "firm": "Mingshi Investment (Mengxi) (蒙玺投资) — China, Shanghai",
+        "website": "https://www.mxifund.com",
+        "note": "Distinct firm from Mingshi Fund (鸣石); this is Shanghai Mengxi/蒙玺投资."
+      },
+      {
+        "firm": "NK Securities Research — India, Gurugram",
+        "website": "https://www.nksecurities.com",
+        "note": null
+      },
+      {
+        "firm": "Open Futures — India, Delhi / Gurugram",
+        "website": "https://openfutures.in",
+        "note": "Primary homepage is openfutures.in; a secondary domain openfutures.co.in also exists."
+      },
+      {
+        "firm": "Optimus Prime Securities and Research — India, Bengaluru",
+        "website": "https://www.optimusprimeresearch.com",
+        "note": null
+      },
+      {
+        "firm": "Ortus Capital Management — Hong Kong, Hong Kong",
+        "website": "https://ortuscapital.com",
+        "note": "Official site per Bloomberg/D&B/LinkedIn and an indexed live subpage (ortuscapital.com/page/disclaimer); direct homepage load could not be re-verified because the sandbox has no DNS/network access."
+      },
+      {
+        "firm": "Qilin Investment (启林投资) — China, Shanghai",
+        "website": "https://www.70capital.com",
+        "note": "Shanghai Qilin Investment (启林投资) official site is 70capital.com. NOT qilincapital.org, which is an unrelated German firm (Qilin Capital, Zossen)."
+      },
+      {
+        "firm": "Qraft Technologies — South Korea, Seoul",
+        "website": "https://www.qraftec.com",
+        "note": "qraftec.com is the corporate homepage; qraftaietf.com is their separate AI-ETF product site."
+      },
+      {
+        "firm": "Quadeye Securities — India, Gurugram",
+        "website": "https://www.quadeye.com",
+        "note": null
+      },
+      {
+        "firm": "Quantbox Research — India, Mumbai",
+        "website": "https://www.quantboxresearch.com",
+        "note": null
+      },
+      {
+        "firm": "Quantedge Capital",
+        "website": "https://www.quantedge.com",
+        "note": null
+      },
+      {
+        "firm": "QuantPi (Liangpai Investment) (量派投资)",
+        "website": "https://www.qpalpha.com",
+        "note": "Official site is qpalpha.com (en.qpalpha.com for English). NOT quantpi.com, which is an unrelated German AI-testing company."
+      },
+      {
+        "firm": "Simplex Asset Management",
+        "website": "https://www.simplexasset.com",
+        "note": null
+      },
+      {
+        "firm": "Timefolio Asset Management",
+        "website": "https://www.timefolio.co.kr",
+        "note": null
+      },
+      {
+        "firm": "Ubiquant (九坤)",
+        "website": "https://www.ubiquant.com",
+        "note": null
+      },
+      {
+        "firm": "Wanyan Asset Management (顽岩资产)",
+        "website": "https://www.wanyantech.com",
+        "note": null
+      },
+      {
+        "firm": "Wenbo Investment (稳博投资)",
+        "website": "https://www.wenbofund.com",
+        "note": null
+      },
+      {
+        "firm": "Yanfu (衍复)",
+        "website": "https://yanfuinvestments.com",
+        "note": null
+      },
+      {
+        "firm": "Zhuoshi Private Fund (卓识私募基金)",
+        "website": "https://www.zsquant.com",
+        "note": "Homepage brands as 卓识基金 / Zhuoshi Fund; confirmed via fetch."
+      },
+      {
+        "firm": "Abu Dhabi Investment Authority (ADIA)",
+        "website": "https://www.adia.ae",
+        "note": null
+      },
+      {
+        "firm": "Algoz",
+        "website": "https://algoz.io",
+        "note": null
+      },
+      {
+        "firm": "Barak Capital",
+        "website": "https://www.barakcapital.com",
+        "note": null
+      },
+      {
+        "firm": "Continuum Capital Management",
+        "website": null,
+        "note": "No official site findable. This is the Nikolay Aleksandrov quant fund (ex-ExodusPoint/Millennium, ~$500M Morgan Stanley mandate); secretive new launch. Surfaced Continuum Capital/Trading domains are unrelated firms."
+      },
+      {
+        "firm": "Deep Edge Fund",
+        "website": "https://deepedge.fund",
+        "note": null
+      },
+      {
+        "firm": "Efficient Frontier",
+        "website": "https://efrontier.io",
+        "note": "Crypto algo-trading firm / liquidity provider, Tel Aviv + SF."
+      },
+      {
+        "firm": "Final",
+        "website": "https://www.final.co.il",
+        "note": "Israeli ML-HFT firm, Herzliya (final.co.il)."
+      },
+      {
+        "firm": "Muwazana Financial",
+        "website": "https://www.muwazana.com",
+        "note": "Riyadh low-latency trading firm; distinct from muwazana.ae (a UAE tax-advisory firm)."
+      },
+      {
+        "firm": "Epoch Capital",
+        "website": "https://epoch.capital",
+        "note": "Sydney prop-trading firm; not the US 'Epoch Investment Partners'."
+      },
+      {
+        "firm": "Nine Mile Financial",
+        "website": "https://www.nmftrading.com",
+        "note": "Sydney market maker; official domain is nmftrading.com."
+      },
+      {
+        "firm": "Tibra Capital",
+        "website": "https://www.tibra.com",
+        "note": "Prop-trading firm, Austinmer/Wollongong NSW."
+      },
+      {
+        "firm": "VivCourt Trading (Vivienne Court)",
+        "website": "https://www.vivcourt.com",
+        "note": "Sydney (Paddington) prop-trading firm."
+      },
+      {
+        "firm": "Giant Steps Capital",
+        "website": "https://www.gscap.com.br",
+        "note": "Sao Paulo systematic/quant asset manager."
+      },
+      {
+        "firm": "Kadima Asset Management",
+        "website": "https://www.kadimaasset.com.br",
+        "note": "Rio de Janeiro quantitative asset manager."
+      },
+      {
+        "firm": "Murano Investimentos",
+        "website": "https://www.muranoinvest.com",
+        "note": "Rio de Janeiro quantitative asset manager (muranoinvest.com; not muranoip.com)."
+      },
+      {
+        "firm": "PRACK Asset Management",
+        "website": "https://www.prack-am.com",
+        "note": "Buenos Aires quantitative hedge fund; root domain prack-am.com."
+      }
+    ]
+  },
+  "workflowProgress": [
+    {
+      "type": "workflow_phase",
+      "index": 1,
+      "title": "Lookup"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 1,
+      "label": "websites:1",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a71f5010324143234",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944431,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281000845,
+      "tokens": 42163,
+      "toolCalls": 16,
+      "durationMs": 56413,
+      "resultPreview": "{\"results\":[{\"firm\":\"Akuna Capital — USA, Chicago\",\"website\":\"https://akunacapital.com\",\"note\":null},{\"firm\":\"AQR Capital — USA, Greenwich CT\",\"website\":\"https://www.aqr.com\",\"note\":null},{\"firm\":\"Aquatic Capital Management — United States, Chicago\",\"website\":\"https://www.aquatic.com\",\"note\":null},{\"firm\":\"Arrowstreet Capital — United States, Boston\",\"website\":\"https://www.arrowstreetcapital.com\",…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 2,
+      "label": "websites:2",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a364a350284483410",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944432,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281019283,
+      "tokens": 43625,
+      "toolCalls": 19,
+      "durationMs": 74851,
+      "resultPreview": "{\"results\":[{\"firm\":\"Eagle Seven\",\"website\":\"https://www.eagleseven.com\",\"note\":\"Chicago prop trading firm; verified homepage. A separate eagle-seven.com exists but is a different entity.\"},{\"firm\":\"Eladian Partners\",\"website\":null,\"note\":\"No live official site; eladian.com is a parked GoDaddy for-sale domain and firm appears defunct (Crunchbase: permanently closed). Only third-party profiles foun…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 3,
+      "label": "websites:3",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "aade9ec28dfe45124",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944432,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281025503,
+      "tokens": 42474,
+      "toolCalls": 16,
+      "durationMs": 81071,
+      "resultPreview": "{\"results\":[{\"firm\":\"Millennium — USA, NYC\",\"website\":\"https://www.mlp.com\",\"note\":\"Millennium Management's official homepage is at mlp.com.\"},{\"firm\":\"Old Mission — USA, Chicago/NYC\",\"website\":\"https://www.oldmissioncapital.com\",\"note\":null},{\"firm\":\"PDT Partners — USA, NYC\",\"website\":\"https://pdtpartners.com\",\"note\":null},{\"firm\":\"PEAK6 Capital Management — United States, Austin\",\"website\":\"http…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 4,
+      "label": "websites:4",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a6b9f658152529fd3",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944433,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281076535,
+      "tokens": 42781,
+      "toolCalls": 16,
+      "durationMs": 132102,
+      "resultPreview": "{\"results\":[{\"firm\":\"Tower Research Capital\",\"website\":\"https://tower-research.com\",\"note\":null},{\"firm\":\"Two Sigma\",\"website\":\"https://www.twosigma.com\",\"note\":null},{\"firm\":\"Vatic Labs (Vatic Investments)\",\"website\":\"https://www.vaticlabs.ai\",\"note\":\"Firm brands itself 'Vatic Labs'; 'Vatic Investments' is the same NYC quant firm.\"},{\"firm\":\"Verition Fund Management\",\"website\":\"https://www.veriti…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 5,
+      "label": "websites:5",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a4edc9b5a40e8ede2",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944433,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281018093,
+      "tokens": 42005,
+      "toolCalls": 16,
+      "durationMs": 73660,
+      "resultPreview": "{\"results\":[{\"firm\":\"Da Vinci Trading (Da Vinci Derivatives)\",\"website\":\"https://davincitrading.com\",\"note\":\"Firm rebranded from 'Da Vinci Derivatives' to 'Da Vinci Trading'; official site is davincitrading.com.\"},{\"firm\":\"Florin Court\",\"website\":\"https://florincourt.com\",\"note\":null},{\"firm\":\"Flow Traders\",\"website\":\"https://www.flowtraders.com\",\"note\":null},{\"firm\":\"G-Research\",\"website\":\"https:…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 6,
+      "label": "websites:6",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a574a612c22980735",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944433,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281038383,
+      "tokens": 46623,
+      "toolCalls": 19,
+      "durationMs": 93950,
+      "resultPreview": "{\"results\":[{\"firm\":\"Squarepoint Capital\",\"website\":\"https://www.squarepoint-capital.com\",\"note\":null},{\"firm\":\"Systematica\",\"website\":\"https://www.systematica.com\",\"note\":null},{\"firm\":\"Wintermute\",\"website\":\"https://www.wintermute.com\",\"note\":null},{\"firm\":\"Winton\",\"website\":\"https://www.winton.com\",\"note\":null},{\"firm\":\"XTX Markets\",\"website\":\"https://www.xtxmarkets.com\",\"note\":null},{\"firm\":\"A…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 7,
+      "label": "websites:7",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a57b4567719b2ab72",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944433,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281084245,
+      "tokens": 48686,
+      "toolCalls": 20,
+      "durationMs": 139812,
+      "resultPreview": "{\"results\":[{\"firm\":\"Dolat Capital\",\"website\":\"https://www.dolatcapital.com\",\"note\":\"Primary corporate/asset-management homepage; firm also runs dolatcapital.in for its research/dev arm.\"},{\"firm\":\"Eclipse Trading\",\"website\":\"https://www.eclipsetrading.com\",\"note\":null},{\"firm\":\"Estee Advisors\",\"website\":\"https://esteeadvisors.com\",\"note\":null},{\"firm\":\"Evolution Asset Management (进化论资产)\",\"website…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 8,
+      "label": "websites:8",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a737827f2d519aa42",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944433,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281171534,
+      "tokens": 50848,
+      "toolCalls": 27,
+      "durationMs": 227101,
+      "resultPreview": "{\"results\":[{\"firm\":\"Lingjun Investment (灵均) — China, Beijing\",\"website\":\"https://www.lingjuninvest.com\",\"note\":null},{\"firm\":\"Linitics — Singapore, Singapore\",\"website\":\"https://linitics.com\",\"note\":null},{\"firm\":\"Longqi Technology (龙旗科技) — China, Hangzhou\",\"website\":\"https://sci-inv.com\",\"note\":\"Firm trades as Longqi/Hangzhou Longqi Scientific Investment; official site is sci-inv.com (English: e…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 9,
+      "label": "websites:9",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a11e6234a3d5b6dde",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783280944434,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281071435,
+      "tokens": 47782,
+      "toolCalls": 20,
+      "durationMs": 127001,
+      "resultPreview": "{\"results\":[{\"firm\":\"Quantedge Capital\",\"website\":\"https://www.quantedge.com\",\"note\":null},{\"firm\":\"QuantPi (Liangpai Investment) (量派投资)\",\"website\":\"https://www.qpalpha.com\",\"note\":\"Official site is qpalpha.com (en.qpalpha.com for English). NOT quantpi.com, which is an unrelated German AI-testing company.\"},{\"firm\":\"Simplex Asset Management\",\"website\":\"https://www.simplexasset.com\",\"note\":null},{\"…"
+    },
+    {
+      "type": "workflow_agent",
+      "index": 10,
+      "label": "websites:10",
+      "phaseIndex": 1,
+      "phaseTitle": "Lookup",
+      "agentId": "a8c13da529a7d13a4",
+      "model": "claude-opus-4-8",
+      "state": "done",
+      "startedAt": 1783281000846,
+      "queuedAt": 1783280944418,
+      "attempt": 1,
+      "lastToolName": "StructuredOutput",
+      "promptPreview": "Find the OFFICIAL website (homepage) for each firm below. These are quant/HFT/asset-management firms. Today is 2026-07-05.\n\nFIRST: load web tools with one ToolSearch call: \"select:WebSearch,WebFetch\".\n\nFor each firm: run a web search, identify the firm's own official homepage, and return the root URL (e.g. https://www.janestreet.com). Use country + HQ city to disambiguate — several names are gener…",
+      "lastProgressAt": 1783281086406,
+      "tokens": 40128,
+      "toolCalls": 13,
+      "durationMs": 85560,
+      "resultPreview": "{\"results\":[{\"firm\":\"Efficient Frontier\",\"website\":\"https://efrontier.io\",\"note\":\"Crypto algo-trading firm / liquidity provider, Tel Aviv + SF.\"},{\"firm\":\"Final\",\"website\":\"https://www.final.co.il\",\"note\":\"Israeli ML-HFT firm, Herzliya (final.co.il).\"},{\"firm\":\"Muwazana Financial\",\"website\":\"https://www.muwazana.com\",\"note\":\"Riyadh low-latency trading firm; distinct from muwazana.ae (a UAE tax-adv…"
+    }
+  ],
+  "totalTokens": 447115,
+  "totalToolCalls": 182
+}
