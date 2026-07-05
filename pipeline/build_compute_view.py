@@ -37,13 +37,17 @@ def load(csv_path: Path) -> tuple[list, list]:
     df["mw"] = pd.to_numeric(df.power_mw, errors="coerce")
     df["gpu"] = pd.to_numeric(df.get("gpu_count", ""), errors="coerce")
 
+    note_col = "power_basis" if "power_basis" in df.columns else "capacity_note"
+
     def rec(r):
+        note = getattr(r, note_col, "") or ""
         return {
             "lon": r.lon, "lat": r.lat,
             "firm": r.firm, "site": r.site_name, "city": r.city,
             "status": r.status,
             "mw": None if pd.isna(r.mw) else float(r.mw),
             "gpu": None if pd.isna(r.gpu) else int(r.gpu),
+            "note": str(note)[:140],
         }
 
     points = [rec(r) for r in df.itertuples()]
@@ -94,7 +98,8 @@ def html(columns: list, points: list) -> str:
   <div style="font-weight:600; font-size:12px;">Disclosed power (MW)</div>
   <div class="bar"></div>
   <div class="row"><span id="mwmin">0</span><span id="mwmax">MW</span></div>
-  <div class="note"><span class="dot"></span>site with no public MW figure (undisclosed)</div>
+  <div class="note">height &amp; colour on a √ scale (small sites stay visible).
+    <span class="dot"></span>dot = site with no public MW figure.</div>
 </div>
 <script>
 const DATA = {data};
@@ -125,9 +130,9 @@ function layers() {{
       pickable: true,
     }}),
     new ColumnLayer({{
-      id: 'mw', data: DATA.columns, diskResolution: 24, radius: 30000,
-      extruded: true, radiusUnits: 'meters', elevationScale: 560000 / MAXMW,
-      getPosition: d => [d.lon, d.lat], getElevation: d => d.mw,
+      id: 'mw', data: DATA.columns, diskResolution: 24, radius: 34000,
+      extruded: true, radiusUnits: 'meters', elevationScale: 620000 / Math.sqrt(MAXMW),
+      getPosition: d => [d.lon, d.lat], getElevation: d => Math.sqrt(d.mw),
       getFillColor: d => mwColor(d.mw), pickable: true,
       material: {{ambient: 0.64, diffuse: 0.6, shininess: 28, specularColor: [60,60,60]}},
     }}),
@@ -136,7 +141,7 @@ function layers() {{
 
 const map = new maplibregl.Map({{
   container: 'map', style: '{BASEMAP}',
-  center: [2, 34], zoom: 1.15, pitch: 42, bearing: 0, antialias: true,
+  center: [-38, 42], zoom: 1.15, pitch: 44, bearing: 0, antialias: true,
   maxPitch: 70,
 }});
 map.addControl(new maplibregl.NavigationControl({{visualizePitch: true}}), 'top-right');
@@ -145,7 +150,8 @@ map.on('load', () => {{
     interleaved: true, layers: layers(),
     getTooltip: ({{object}}) => object && {{html:
       `<b>${{object.firm}}</b><br>${{object.site}}<br>${{object.city}} · ${{object.status}}`
-      + `<br>MW: ${{object.mw ?? '—'}}  ·  GPUs: ${{object.gpu ? object.gpu.toLocaleString() : '—'}}`}},
+      + `<br>MW: ${{object.mw ?? '—'}}  ·  GPUs: ${{object.gpu ? object.gpu.toLocaleString() : '—'}}`
+      + (object.note ? `<br><span style="color:#9a978f">${{object.note}}</span>` : '')}},
   }}));
 }});
 </script>
@@ -156,7 +162,7 @@ map.on('load', () => {{
 
 def main() -> None:
     p = argparse.ArgumentParser()
-    p.add_argument("--csv", default=ROOT / "data" / "compute_sites.csv", type=Path)
+    p.add_argument("--csv", default=ROOT / "data" / "firm_datacenters.csv", type=Path)
     p.add_argument("--out", default=ROOT / "docs" / "compute.html", type=Path)
     args = p.parse_args()
     columns, points = load(args.csv)

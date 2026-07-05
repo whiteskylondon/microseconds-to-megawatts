@@ -33,6 +33,15 @@ FACILITY_TYPES = {"self_build", "colo", "cloud", "hybrid", "undisclosed"}
 EVIDENCE_COLUMNS = [
     "ref_id", "ref_type", "source_no", "url", "publisher", "supports", "quote",
 ]
+DC_COLUMNS = [
+    "firm", "site_name", "role", "operator", "city", "country", "address",
+    "lat", "lon", "coord_precision", "status", "gpu_count", "gpu_type",
+    "power_mw", "power_basis", "capacity_note", "confidence",
+    "evidence_count", "evidence_url",
+]
+DC_ROLES = {"self_build_dc", "colocation", "cloud_region", "office_hpc",
+            "on_prem_hq", "undisclosed"}
+DC_STATUS = {"operational", "under_construction", "planned", "historical"}
 
 TIERS = {"execution", "network", "research"}
 CONFIDENCE = {"confirmed", "reported", "inferred"}
@@ -191,6 +200,41 @@ def test_compute_evidence_count_matches(compute, evidence):
         expected = int(per_site.get(row.site_id, 1))
         assert int(row.evidence_count) == expected, \
             f"{row.site_id}: evidence_count {row.evidence_count} != {expected}; rerun build_compute_sheet.py"
+
+
+@pytest.fixture(scope="module")
+def datacenters() -> pd.DataFrame:
+    return pd.read_csv(DATA / "firm_datacenters.csv", dtype=str).fillna("")
+
+
+def test_dc_schema(datacenters):
+    assert list(datacenters.columns) == DC_COLUMNS
+
+
+def test_dc_enums(datacenters):
+    assert datacenters.role.isin(DC_ROLES).all()
+    assert datacenters.coord_precision.isin(COORD_PRECISION).all()
+    assert datacenters.status.isin(DC_STATUS).all()
+    assert datacenters.confidence.isin(CONFIDENCE).all()
+
+
+def test_dc_coord_bounds(datacenters):
+    have = datacenters[(datacenters.lat != "") & (datacenters.lon != "")].copy()
+    lat = have.lat.astype(float)
+    lon = have.lon.astype(float)
+    bad = have[(lat.abs() > 90) | (lon.abs() > 180)]
+    assert bad.empty, f"bad DC coords: {bad.site_name.tolist()}"
+
+
+def test_dc_power_positive(datacenters):
+    with_mw = datacenters[datacenters.power_mw != ""]
+    assert (with_mw.power_mw.astype(float) > 0).all()
+
+
+def test_dc_evidence_urls(datacenters):
+    have = datacenters[datacenters.evidence_url != ""]
+    bad = have[~have.evidence_url.str.startswith(("http://", "https://"))]
+    assert bad.empty, f"malformed DC evidence_url: {bad.site_name.tolist()}"
 
 
 def test_path_enums_and_urls(paths):
