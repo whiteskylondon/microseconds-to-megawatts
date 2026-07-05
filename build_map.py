@@ -1,11 +1,14 @@
 """
 Quant/HFT infrastructure map — build script.
 
-Reads data/sites_seed.csv, enriches it (Google Maps deep links, tier labels),
-and exports a standalone kepler.gl HTML map suitable for embedding in a blog post.
+Reads data/sites_seed.csv (point pins) and data/paths.csv (Tier-2 arcs,
+joined to site coordinates via origin/dest site_ids), enriches them
+(Google Maps deep links, tier labels), and exports a standalone kepler.gl
+HTML map suitable for embedding in a blog post.
 
 Usage:
-    python build_map.py [--csv data/sites_seed.csv] [--out quant_dc_map.html]
+    python build_map.py [--csv data/sites_seed.csv] [--paths data/paths.csv]
+                        [--out quant_dc_map.html]
 """
 
 from __future__ import annotations
@@ -58,6 +61,9 @@ TIER_COLORS = {
     "research": [70, 130, 240],   # blue — the compute layer
 }
 
+PATHS_LABEL = "Tier 2 — Paths (arcs)"
+PATHS_COLOR = [250, 190, 60]      # amber, matching the network tier
+
 
 def load_sites(csv_path: Path) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
@@ -84,8 +90,33 @@ def load_sites(csv_path: Path) -> pd.DataFrame:
     return df
 
 
-def kepler_config(df: pd.DataFrame) -> dict:
-    """Minimal kepler config: one point layer per tier, tooltip with evidence fields."""
+def load_paths(paths_csv: Path, sites: pd.DataFrame) -> pd.DataFrame | None:
+    """Load Tier-2 arcs and join origin/dest coordinates from the sites table.
+
+    Returns None when the paths file is absent or has no rows."""
+    if not paths_csv.exists():
+        return None
+    paths = pd.read_csv(paths_csv)
+    if paths.empty:
+        return None
+
+    coords = sites.set_index("site_id")[["lat", "lon", "site_name"]]
+    unknown = (set(paths["origin_site_id"]) | set(paths["dest_site_id"])) - set(coords.index)
+    if unknown:
+        raise ValueError(f"paths.csv references unknown site_ids: {sorted(unknown)}")
+
+    for end, col in (("origin", "origin_site_id"), ("dest", "dest_site_id")):
+        joined = coords.loc[paths[col]].reset_index(drop=True)
+        paths[f"{end}_lat"] = joined["lat"]
+        paths[f"{end}_lon"] = joined["lon"]
+        paths[f"{end}_name"] = joined["site_name"]
+    paths["route"] = paths["origin_name"] + " → " + paths["dest_name"]
+    return paths
+
+
+def kepler_config(df: pd.DataFrame, with_paths: bool = False) -> dict:
+    """Minimal kepler config: one point layer per tier (+ an arc layer for
+    Tier-2 paths), tooltip with evidence fields."""
     center_lat = float(df["lat"].mean())
     center_lon = float(df["lon"].mean())
 
@@ -110,6 +141,26 @@ def kepler_config(df: pd.DataFrame) -> dict:
                 },
             }
         )
+    if with_paths:
+        layers.append(
+            {
+                "id": "layer_paths",
+                "type": "arc",
+                "config": {
+                    "dataId": "paths",
+                    "label": PATHS_LABEL,
+                    "columns": {
+                        "lat0": "origin_lat",
+                        "lng0": "origin_lon",
+                        "lat1": "dest_lat",
+                        "lng1": "dest_lon",
+                    },
+                    "isVisible": True,
+                    "color": PATHS_COLOR,
+                    "visConfig": {"opacity": 0.5, "thickness": 1.5},
+                },
+            }
+        )
 
     tooltip_fields = [
         {"name": f}
@@ -118,11 +169,22 @@ def kepler_config(df: pd.DataFrame) -> dict:
             "operator_or_venue",
             "firms_linked",
             "capacity_note",
+            "power_mw",
+            "status",
             "confidence",
             "evidence_note",
+            "evidence_url",
             "gmaps_url",
         ]
     ]
+    paths_tooltip = [
+        {"name": f}
+        for f in ["route", "operator", "medium", "status", "confidence",
+                  "evidence_note", "evidence_url"]
+    ]
+    fields_to_show = {t: tooltip_fields for t in TIER_COLORS}
+    if with_paths:
+        fields_to_show["paths"] = paths_tooltip
 
     return {
         "version": "v1",
@@ -131,7 +193,7 @@ def kepler_config(df: pd.DataFrame) -> dict:
                 "layers": layers,
                 "interactionConfig": {
                     "tooltip": {
-                        "fieldsToShow": {t: tooltip_fields for t in TIER_COLORS},
+                        "fieldsToShow": fields_to_show,
                         "enabled": True,
                     }
                 },
@@ -149,15 +211,18 @@ def kepler_config(df: pd.DataFrame) -> dict:
     }
 
 
-def build(csv_path: Path, out_path: Path) -> None:
+def build(csv_path: Path, out_path: Path, paths_csv: Path | None = None) -> None:
     df = load_sites(csv_path)
+    paths = load_paths(paths_csv, df) if paths_csv else None
 
-    m = KeplerGl(config=kepler_config(df))
+    m = KeplerGl(config=kepler_config(df, with_paths=paths is not None))
     # One dataset per tier so each gets its own layer + legend entry + toggle.
     for tier in TIER_COLORS:
         subset = df[df["tier"] == tier].reset_index(drop=True)
         if not subset.empty:
             m.add_data(data=subset, name=tier)
+    if paths is not None:
+        m.add_data(data=paths, name="paths")
 
     m.save_to_html(file_name=str(out_path), read_only=False)
 
@@ -169,14 +234,16 @@ def build(csv_path: Path, out_path: Path) -> None:
     html = head + FULLSCREEN_SNIPPET + "</body>" + tail
     out_path.write_text(html, encoding="utf-8")
 
+    n_paths = 0 if paths is None else len(paths)
     print(f"Wrote {out_path} — {len(df)} sites "
-          f"({df['tier'].value_counts().to_dict()}); "
+          f"({df['tier'].value_counts().to_dict()}), {n_paths} paths; "
           f"stripped {n_stripped} bundled Mapbox token(s)")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", default="data/sites_seed.csv", type=Path)
+    parser.add_argument("--paths", default="data/paths.csv", type=Path)
     parser.add_argument("--out", default="quant_dc_map.html", type=Path)
     args = parser.parse_args()
-    build(args.csv, args.out)
+    build(args.csv, args.out, paths_csv=args.paths)

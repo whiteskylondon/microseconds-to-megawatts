@@ -45,12 +45,12 @@ consumes megawatts — and megawatts leave a public paper trail.
 
 `data/sites_seed.csv` columns: site_id, site_name, tier, operator_or_venue,
 firms_linked, lat, lon, coord_precision, city, country, capacity_note,
-evidence_type, evidence_note, confidence, verify_url_hint (to be replaced by
-`evidence_url` with real URLs).
+power_mw, status, evidence_type, evidence_note, evidence_url, confidence,
+verify_url_hint (legacy; being replaced by `evidence_url` with real URLs).
 
-Planned second file: `data/paths.csv` for Tier-2 arc pairs
-(origin_site_id, dest_site_id, operator, medium, evidence_url) — feeds a
-kepler arc layer.
+Second file: `data/paths.csv` for Tier-2 arc pairs (path_id, origin_site_id,
+dest_site_id, operator, medium, status, confidence, evidence_note,
+evidence_url) — feeds the kepler arc layer in build_map.py.
 
 ## Evidence pipeline (strength order)
 
