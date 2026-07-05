@@ -24,6 +24,7 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parent.parent
 SITES_CSV = ROOT / "data" / "sites_seed.csv"
+EVIDENCE_CSV = ROOT / "data" / "evidence.csv"
 OUT_CSV = ROOT / "data" / "compute_sites.csv"
 
 # facility_type: self_build / colo / cloud / hybrid / undisclosed
@@ -169,7 +170,8 @@ COMPUTE_SPECS = {
 COLUMNS = [
     "site_id", "firm", "site_name", "facility_type", "city", "country",
     "lat", "lon", "coord_precision", "status", "gpu_count", "gpu_type",
-    "compute_note", "power_mw", "energy_note", "confidence", "evidence_url",
+    "compute_note", "power_mw", "energy_note", "confidence",
+    "evidence_count", "evidence_url",
 ]
 
 
@@ -181,6 +183,12 @@ def main() -> None:
     extra = set(COMPUTE_SPECS) - set(research.index)
     if missing or extra:
         raise SystemExit(f"COMPUTE_SPECS out of sync: missing={sorted(missing)} extra={sorted(extra)}")
+
+    # Distinct-source counts from the evidence table (defaults to 1).
+    counts = {}
+    if EVIDENCE_CSV.exists():
+        ev = pd.read_csv(EVIDENCE_CSV, dtype=str)
+        counts = ev[ev.ref_type == "site"].groupby("ref_id").size().to_dict()
 
     rows = []
     for site_id, spec in COMPUTE_SPECS.items():
@@ -194,6 +202,7 @@ def main() -> None:
             "status": s.status,
             "power_mw": s.power_mw,
             "confidence": s.confidence,
+            "evidence_count": counts.get(site_id, 1),
             "evidence_url": s.evidence_url,
             **spec,
         })

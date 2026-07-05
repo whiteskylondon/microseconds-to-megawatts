@@ -70,6 +70,7 @@ SITE_DISPLAY = {
     "status": "Status",
     "coord_precision": "Pin precision",
     "confidence": "Confidence",
+    "evidence_count": "Sources (#)",
     "evidence_note": "Evidence",
     "evidence_url": "Source URL",
     "gmaps_url": "Google Maps",
@@ -80,6 +81,7 @@ PATH_DISPLAY = {
     "medium": "Medium",
     "status": "Status",
     "confidence": "Confidence",
+    "evidence_count": "Sources (#)",
     "evidence_note": "Evidence",
     "evidence_url": "Source URL",
 }
@@ -95,13 +97,30 @@ PATHS_LABEL = "Layer 2 — Network paths (routes)"
 PATHS_COLOR = [250, 190, 60]      # amber, matching the network layer
 
 
-def load_sites(csv_path: Path) -> pd.DataFrame:
+def evidence_counts(evidence_csv: Path) -> pd.Series:
+    """ref_id -> number of distinct public sources, from evidence.csv.
+
+    Empty Series when the file is absent (evidence_count then defaults to 1
+    since every mapped record carries at least its own evidence_url)."""
+    if not evidence_csv.exists():
+        return pd.Series(dtype="int64")
+    ev = pd.read_csv(evidence_csv, dtype=str)
+    return ev.groupby("ref_id").size()
+
+
+def load_sites(csv_path: Path, counts: pd.Series | None = None) -> pd.DataFrame:
     df = pd.read_csv(csv_path)
 
     required = {"site_id", "site_name", "tier", "lat", "lon", "confidence"}
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"CSV missing required columns: {missing}")
+
+    # How many distinct public sources back each pin (defaults to 1: every
+    # record carries at least its own evidence_url).
+    counts = pd.Series(dtype="int64") if counts is None else counts
+    df["evidence_count"] = (
+        df["site_id"].map(counts).fillna(1).astype(int).astype(str))
 
     # Google Maps handoff, honest about pin precision: coordinate deep link
     # only where the pin is placed (exact/approximate); a name+city text
@@ -130,7 +149,8 @@ def load_sites(csv_path: Path) -> pd.DataFrame:
     return df.fillna("")
 
 
-def load_paths(paths_csv: Path, sites: pd.DataFrame) -> pd.DataFrame | None:
+def load_paths(paths_csv: Path, sites: pd.DataFrame,
+               counts: pd.Series | None = None) -> pd.DataFrame | None:
     """Load Tier-2 arcs and join origin/dest coordinates from the sites table.
 
     Returns None when the paths file is absent or has no rows."""
@@ -151,6 +171,10 @@ def load_paths(paths_csv: Path, sites: pd.DataFrame) -> pd.DataFrame | None:
         paths[f"{end}_lon"] = joined["lon"]
         paths[f"{end}_name"] = joined["site_name"]
     paths["route"] = paths["origin_name"] + " → " + paths["dest_name"]
+
+    counts = pd.Series(dtype="int64") if counts is None else counts
+    paths["evidence_count"] = (
+        paths["path_id"].map(counts).fillna(1).astype(int).astype(str))
     return paths
 
 
@@ -233,9 +257,11 @@ def kepler_config(df: pd.DataFrame, with_paths: bool = False) -> dict:
     }
 
 
-def build(csv_path: Path, out_path: Path, paths_csv: Path | None = None) -> None:
-    df = load_sites(csv_path)
-    paths = load_paths(paths_csv, df) if paths_csv else None
+def build(csv_path: Path, out_path: Path, paths_csv: Path | None = None,
+          evidence_csv: Path | None = None) -> None:
+    counts = evidence_counts(evidence_csv) if evidence_csv else pd.Series(dtype="int64")
+    df = load_sites(csv_path, counts=counts)
+    paths = load_paths(paths_csv, df, counts=counts) if paths_csv else None
 
     m = KeplerGl(config=kepler_config(df, with_paths=paths is not None))
     # One dataset per tier so each gets its own layer + legend entry + toggle.
@@ -267,6 +293,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--csv", default="data/sites_seed.csv", type=Path)
     parser.add_argument("--paths", default="data/paths.csv", type=Path)
+    parser.add_argument("--evidence", default="data/evidence.csv", type=Path)
     parser.add_argument("--out", default="quant_dc_map.html", type=Path)
     args = parser.parse_args()
-    build(args.csv, args.out, paths_csv=args.paths)
+    build(args.csv, args.out, paths_csv=args.paths, evidence_csv=args.evidence)

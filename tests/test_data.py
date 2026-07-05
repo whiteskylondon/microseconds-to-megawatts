@@ -26,9 +26,13 @@ PATH_COLUMNS = [
 COMPUTE_COLUMNS = [
     "site_id", "firm", "site_name", "facility_type", "city", "country",
     "lat", "lon", "coord_precision", "status", "gpu_count", "gpu_type",
-    "compute_note", "power_mw", "energy_note", "confidence", "evidence_url",
+    "compute_note", "power_mw", "energy_note", "confidence",
+    "evidence_count", "evidence_url",
 ]
 FACILITY_TYPES = {"self_build", "colo", "cloud", "hybrid", "undisclosed"}
+EVIDENCE_COLUMNS = [
+    "ref_id", "ref_type", "source_no", "url", "publisher", "supports", "quote",
+]
 
 TIERS = {"execution", "network", "research"}
 CONFIDENCE = {"confirmed", "reported", "inferred"}
@@ -148,6 +152,45 @@ def test_compute_gpu_count_numeric(compute):
     nonempty = compute[compute.gpu_count != ""]
     assert nonempty.gpu_count.str.fullmatch(r"\d+").all(), \
         "gpu_count must be a bare integer or empty"
+
+
+@pytest.fixture(scope="module")
+def evidence() -> pd.DataFrame:
+    return pd.read_csv(DATA / "evidence.csv", dtype=str).fillna("")
+
+
+def test_evidence_schema(evidence):
+    assert list(evidence.columns) == EVIDENCE_COLUMNS
+
+
+def test_evidence_refs_exist(evidence, sites, paths):
+    known = set(sites.site_id) | set(paths.path_id)
+    refs = set(evidence.ref_id)
+    assert refs <= known, f"evidence.csv references unknown ids: {sorted(refs - known)}"
+
+
+def test_evidence_urls_wellformed(evidence):
+    bad = evidence[~evidence.url.str.startswith(("http://", "https://"))]
+    assert bad.empty, f"malformed evidence url for: {bad.ref_id.tolist()}"
+
+
+def test_evidence_urls_unique_per_ref(evidence):
+    dupes = evidence[evidence.duplicated(["ref_id", "url"])]
+    assert dupes.empty, f"duplicate source URLs within a record: {dupes.ref_id.tolist()}"
+
+
+def test_every_site_has_evidence(evidence, sites):
+    site_refs = set(evidence[evidence.ref_type == "site"].ref_id)
+    missing = set(sites.site_id) - site_refs
+    assert not missing, f"sites with no evidence row: {sorted(missing)}"
+
+
+def test_compute_evidence_count_matches(compute, evidence):
+    per_site = evidence[evidence.ref_type == "site"].groupby("ref_id").size()
+    for _, row in compute.iterrows():
+        expected = int(per_site.get(row.site_id, 1))
+        assert int(row.evidence_count) == expected, \
+            f"{row.site_id}: evidence_count {row.evidence_count} != {expected}; rerun build_compute_sheet.py"
 
 
 def test_path_enums_and_urls(paths):
