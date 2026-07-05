@@ -23,6 +23,12 @@ PATH_COLUMNS = [
     "path_id", "origin_site_id", "dest_site_id", "operator", "medium",
     "status", "confidence", "evidence_note", "evidence_url",
 ]
+COMPUTE_COLUMNS = [
+    "site_id", "firm", "site_name", "facility_type", "city", "country",
+    "lat", "lon", "coord_precision", "status", "gpu_count", "gpu_type",
+    "compute_note", "power_mw", "energy_note", "confidence", "evidence_url",
+]
+FACILITY_TYPES = {"self_build", "colo", "cloud", "hybrid", "undisclosed"}
 
 TIERS = {"execution", "network", "research"}
 CONFIDENCE = {"confirmed", "reported", "inferred"}
@@ -112,6 +118,36 @@ def test_path_endpoints_exist(paths, sites):
     known = set(sites.site_id)
     refs = set(paths.origin_site_id) | set(paths.dest_site_id)
     assert refs <= known, f"paths reference unknown site_ids: {sorted(refs - known)}"
+
+
+@pytest.fixture(scope="module")
+def compute() -> pd.DataFrame:
+    return pd.read_csv(DATA / "compute_sites.csv", dtype=str).fillna("")
+
+
+def test_compute_schema(compute):
+    assert list(compute.columns) == COMPUTE_COLUMNS
+
+
+def test_compute_in_sync_with_sites(compute, sites):
+    research = sites[sites.tier == "research"]
+    assert set(compute.site_id) == set(research.site_id), \
+        "compute_sites.csv must cover exactly the research-tier records; rerun pipeline/build_compute_sheet.py"
+    joined = compute.merge(research, on="site_id", suffixes=("_c", ""))
+    for col in ("status", "confidence", "coord_precision"):
+        mismatched = joined[joined[f"{col}_c"] != joined[col].astype(str)]
+        assert mismatched.empty, f"{col} out of sync for: {mismatched.site_id.tolist()}"
+
+
+def test_compute_enums(compute):
+    assert compute.facility_type.isin(FACILITY_TYPES).all()
+    assert compute.status.isin(STATUS).all()
+
+
+def test_compute_gpu_count_numeric(compute):
+    nonempty = compute[compute.gpu_count != ""]
+    assert nonempty.gpu_count.str.fullmatch(r"\d+").all(), \
+        "gpu_count must be a bare integer or empty"
 
 
 def test_path_enums_and_urls(paths):
